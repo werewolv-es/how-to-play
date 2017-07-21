@@ -1,0 +1,20 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Mason Leader Role | werewolv.es";
+    Layout = "~/Areas/Guides/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Mason Leader</h2>
+
+<p>The Mason Leader is a villager with the ability to recruit players into the Masons. Once part of the Masons, they can talk to each other in secret at night.</p>
+
+<h3>Notes</h3>
+<ul>
+    <li>If the Mason Leader tries to recruit a Werewolf or a Vampire, they are killed</li>
+    <li>The Mason Leader is not able to recruit a Familiar or a Coven member, but will not be killed if they try</li>
+    <li>The recruited villager retains their original ability</li>
+    <li>The recruited villager is notified that they have been recruited in the morning and who recruited them, but not who any other Masons may be</li>
+    <li>The Mason Leader is (usually) limited to 2 recruits per game</li>
+    <li>A failed recruit (such as a Coven member) does not count towards the limit</li>
+</ul>
