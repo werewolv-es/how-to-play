@@ -1,0 +1,11 @@
+Village
+"Lynch all evil doers"
+
+Wolfpack
+"Outnumber the other factions"
+
+Coven
+"Outnumber the other factions"
+
+Vampire
+"Outnumber the other factions"
