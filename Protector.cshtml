@@ -1,4 +1,4 @@
-﻿@model dynamic
+@model dynamic
 
 @{
     ViewBag.Title = "Protector Role | werewolv.es";
@@ -7,12 +7,29 @@
 
 <h2>Protector</h2>
 
-<p>The protector is used in most games of werewolf. Each night the Protector can guard a player, the target will not die if they are attacked that night.</p>
-<p>The Protector can also choose to protect themselves, but they cannot target the same person two nights in a row.</p>
+<p>The Protector has the ability to guard a single player per night, allowing the player to survive most attacks that night.</p>
 
-<h3>Tips for playing Protector</h3>
+<h2>Role Type</h2>
 <ul>
-    <li>It is common for the Protector to remain anonymous and to guard the Seer when they reveal themselves.</li>
-    <li>If there are no deaths one night it's usually likely that the wolves will attack the same player as they know they can't be defended again. If you protected yourself it may be wise to let the village know before you die.</li>
-    <li>Try to think like a wolf, who would you kill if you were trying to hurt the village? Protect that person!</li>
+     <li>The Protector is seen as member of the village by the Seer.</li>
+     <li>The Protector is seen as a user of witchcraft by the Witch Hunter.</li>
+     <li>The Protector is seen visiting by the Harlot/Stalker/Familiar.</li>
+ </ul>
+
+<h2>Notes</h2>
+<ul>
+    <li>The Protector cannot protect the same player two nights in a row.</li>
+    <li>The Protector can protect themselves (while the Huntsman cannot).</li>
+    <li>If the Protector and Huntsman guard the same target and the wolves attack, the Huntsman's ability triggers first. So the Huntsman and killing wolf will still die.</li>
+    <li>A Protector cannot protect against a Militia's, Witch Hunter's, Zealot's, or Witch's killing abilities.</li>
+</ul>
+
+<h2>Tips for playing Protector</h2>
+<ul>
+    <li>It is common for the Protector to remain anonymous and to guard important village roles, such as the Seer, when they reveal themselves.</li>
+    <li>If there are no deaths one night it's usually likely that the Wolfpack/Vampire will attack the same player as they know they can't be defended again. If you protected yourself it may be wise to let the village know before you die. Other village members may be able to help you, or at least find your killer.</li>
+    <li>If you declare your role for another reason than the one described in the previous note, it is usually wise to not reveal who you protected the most recent night, since any evil faction member now knows whom you cannot protect the upcoming night.</li>
+    <li>The Protector becomes increasingly durable when they combine with a Huntsman and/or Harlot, possibly in combination with an intel role like a Seer. The Huntsman, Protector, and Harlot can protect/watch each other and/or the exposed village roles, so that no Werewolf/Vampire would attempt to kill them. The village often uses this principle even if they cannot guarantee everyone's safety, i.e. when the amount of people that require protection exceeds the amount of defensive roles. It will still be too risky for Werewolves/Vampire to attack anyone in this group.</li>
+    <li>As seen from the previous example, even the sheer possibility of a Protector protecting somebody is enough to deter would-be attackers. If you wish to take a risk, you may even protect another person than the person you were intended/declared to protect, so that the next night - when the evil factions think they're safe - you will be right there!</li>
+    <li>Try to think like the Wolfpack/Vampire, who would you kill if you were trying to hurt the village? Protect that person!</li>
 </ul>
