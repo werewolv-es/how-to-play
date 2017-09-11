@@ -1,4 +1,4 @@
-﻿@model dynamic
+@model dynamic
 
 @{
     ViewBag.Title = "Mason Leader Role | werewolv.es";
@@ -9,12 +9,27 @@
 
 <p>The Mason Leader is a villager with the ability to recruit players into the Masons. Once part of the Masons, they can talk to each other in secret at night.</p>
 
-<h3>Notes</h3>
+<h2>Role Type</h2>
 <ul>
-    <li>If the Mason Leader tries to recruit a Werewolf or a Vampire, they are killed</li>
-    <li>The Mason Leader is not able to recruit a Familiar or a Coven member, but will not be killed if they try</li>
-    <li>The recruited villager retains their original ability</li>
-    <li>The recruited villager is notified that they have been recruited in the morning and who recruited them, but not who any other Masons may be</li>
-    <li>The Mason Leader is (usually) limited to 2 recruits per game</li>
-    <li>A failed recruit (such as a Coven member) does not count towards the limit</li>
+     <li>The Mason Leader is seen as member of the village by the Seer.</li>
+     <li>The Mason Leader is not seen as a user of witchcraft by the Witch Hunter.</li>
+     <li>The Mason Leader is seen visiting by the Harlot/Stalker/Familiar.</li>
+ </ul>
+ 
+<h2>Notes</h2>
+<ul>
+    <li>The Mason Leader is limited to 2 recruits per game.</li>
+    <li>If the Mason Leader tries to recruit a Werewolf or a Vampire, they are killed.</li>
+    <li>The Mason Leader is not able to recruit a Familiar or a Coven member, but will not be killed if they try. This failed recruit does not count towards the ability use limit.</li>
+    <li>The recruited villager retains their original ability.</li>
+    <li>The recruited villager is notified that they have been recruited in the morning and who recruited them, but not who any other Masons may be.</li>
+    <li>The Mason Leader gets a notification if a succesful recruit has been made. No notification is given if the recruit is unsuccesful, but in that case the Mason Leader can draw their own conclusion...</li>
+</ul>
+
+<h2>Tips for playing Mason Leader</h2>
+<ul>
+    <li>A Mason Leader is very effective in creating a team of village members that verify each other. It also allows a recruited village member to share their valuable information with the village through another, so without exposing themselves.</li>
+    <li>It is usually wise to not recruit the first night; you can give yourself some time to first assess the village. Don't wait too long with your (first) recruit though!</li>
+    <li>It depends on the setup whether it is wise to expose yourself before making your recruit. In case you die, the village may at least use the information that you tried to recruit a specific person. But it wouldn't be wise if you suspect there is no one to protect you in the first place, and the presence of Coven members makes your task more difficult as well (a Succubus may redirect you, for example).</li>
+    <li>You may, as Masons, agree on certain code words with which you can verify each other the following day, by stating them in the village day chat. This helps protect the Masons against Djinn-swaps and Shapeshifts, for example. Note that all such coded messages should fit within the general guidelines on coded messages/cryptography (see the 'Rules' section for this).</li> 
 </ul>
