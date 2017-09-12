@@ -2,10 +2,10 @@ Village
 "Lynch all evil doers"
 
 Wolfpack
-"Outnumber the other factions"
+"Lynch all members of other evil factions, and reach parity with the Village."
 
 Coven
-"Outnumber the other factions"
+"Lynch all members of other evil factions, and reach parity with the Village."
 
 Vampire
-"Outnumber the other factions"
+"Lynch all members of other evil factions, and reach parity with the Village."
