@@ -1,0 +1,61 @@
+@model dynamic
+
+@{
+    ViewBag.Title = "Victory Conditions | werewolv.es";
+    Layout = "~/Areas/Guides/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Victory Conditions</h2>
+
+<p>Every faction in the game has certain victory conditions. Once the conditions are met, the game will end in a victory for the corresponding faction.
+Most factions win by reaching parity with the Village. Parity is reached when the number of players in a certain faction is at least half of the total alive player count.
+A game will continue running until a faction has accomplished all their victory conditions. There is only one faction that can win per game, there are no shared victories or draws possible.</p>
+
+<p>The victory conditions are checked at dawn and nightfall, after a possible lynch is executed (nightfall) or after all kills and/or revives are reported to the village (dawn).
+If the game ends, a public message will be broadcasted, and the players will be talk to each other in the post-game lobby. The players' account names now appear next to their characters' names, and the role they had appear in the sidebar.</p>
+
+<p>A faction wins, after dawn or nightfall, if all the listed conditions are met:</p>
+
+<h3>Demons</h3>
+<ul>
+  <li>Reach parity with the Village</li>
+    <ul>
+      <li>Puppets count as players for this parity check</li>
+    </ul>
+</ul>
+
+<h3>Vampires</h3>
+<ul>
+  <li>For every basement (one Vampire (Master) plus their Familiar(s)) separately: reach parity with the Village
+  <li>Kill all Demons: as long as a Demon is alive, no Vampire can win
+    <ul>
+      <li>Puppets count as players for this parity check</li>
+      <li>If the Vampire is not alive, their Familiars count as members of the village in the parity check for other factions. Familiars alone cannot prevent another faction from winning through parity</li> 
+    </ul>
+</ul>
+
+<h3>Coven</h3>
+<ul>
+  <li>Reach parity with the Village</li>
+  <li>Kill all Demons, Vampires, and/or Werewolves: as long as any member of one of these factions is alive (excluding Familiars), the Coven cannot win</li>
+    <ul>
+      <li>Puppets do not count as players for this parity check</li>
+    </ul>
+</ul>
+
+<h3>Werewolves</h3>
+<ul>
+  <li>Reach parity with the Village</li>
+  <li>Kill all Demons, Vampires, and/or Coven members: as long as any member of one of these factions is alive (excluding Familiars), the Werewolves cannot win</li>
+  <ul>
+    <li>Puppets do not count as players for this parity check</li>
+  </ul>
+</ul>
+
+<h3>The Village</h3>
+<ul>
+  <li>Lynch all members of evil factions</li>
+    <ul>
+      <li>Puppets do have to be killed for this condition to be met</li>
+    </ul>
+</ul>
