@@ -1,0 +1,11 @@
+Village
+"Lynch all evil doers"
+
+Wolfpack
+"Lynch all members of other evil factions, and reach parity with the Village."
+
+Coven
+"Lynch all members of other evil factions, and reach parity with the Village."
+
+Vampire
+"Lynch all members of other evil factions, and reach parity with the Village."
