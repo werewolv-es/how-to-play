@@ -17,7 +17,7 @@
 		<div class="container-fluid" style="margin-bottom: 2em;">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-md-9" id="guide">
+					<div class="col-xs-12 col-md-9" id="guide" v-html="guide">
 					</div>
 					<div class="col-xs-12 col-md-3" id="sidebar">
 					</div>
@@ -37,18 +37,17 @@ export default {
         sidebar: false,
         guide: false
       },
-      currentPage: null
+      guide: null
     }
   },
   mounted () {
-     this.$nextTick(function () {
+    this.$nextTick(function () {
       this.loadSidebar();
     });
   },
   methods: {
     loadSidebar: function() {
-      var guide = document.getElementById('guide');
-      guide.innerHTML = '';
+      this.guide = null;
       var sidebar = document.getElementById('sidebar');
       sidebar.innerHTML = '';
       this.loading.sidebar = true;
@@ -74,15 +73,14 @@ export default {
         }
         this.loading.sidebar = false;
       }, error => {
-        guide.innerHTML = '<div class="background-cover missing-info">Error loading sidebar...</div>';
+        this.guide = '<div class="background-cover missing-info">Error loading sidebar.</div>';
         this.loading.sidebar = false;
       });
     },
-    loadGuide: function(page) {
-      var guide = document.getElementById('guide');
-      guide.innerHTML = '';
+    loadGuide: function(guide) {
+      this.guide = null;
       this.loading.guide = true;
-      this.$http.get('/guides/' + page + '.cshtml').then(response => {
+      this.$http.get('/guides/' + guide + '.cshtml').then(response => {
         var regex = new RegExp(/@{[\S\s]*}|@model.*/, 'g');
         var models = [];
         var matches;
@@ -91,22 +89,14 @@ export default {
         }
         var template = document.createElement('div');
         template.className = 'background-cover';
-        template.innerHTML = response.body;
-        template.innerHTML = template.innerHTML.replace(regex, '');
+        template.innerHTML = response.body.replace(regex, '');
         var modelInfo = document.createElement('div');
         modelInfo.className = 'background-cover model-info' + (models.length > 0 ? '' : 'missing-info');
         modelInfo.innerHTML = models.length > 0 ? models.join('<br/>') : 'Missing model info.';
-        var component = Vue.extend({
-          template: '<div>' + modelInfo.outerHTML + template.outerHTML + '</div>'
-        });
-        var component = new component().$mount();
-        guide.innerHTML = '';
-        guide.appendChild(component.$el);
-        this.currentPage = page;
+        this.guide = '<div>' + modelInfo.outerHTML + template.outerHTML + '</div>'
         this.loading.guide = false;
       }, error => {
-        guide.innerHTML = '<div class="background-cover missing-info">Error loading ' + page + '...</div>';
-        this.currentPage = null;
+        this.guide = '<div class="background-cover missing-info">Error loading "' + guide + '".</div>';
         this.loading.guide = false;
       });
     }
