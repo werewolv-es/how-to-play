@@ -29,19 +29,26 @@
 
 <script>
 import Vue from 'vue'
+import vueUrlParameters from 'vue-url-parameters';
+
 export default {
   name: 'app',
+  mixins: [vueUrlParameters],
   data () {
     return {
       loading: {
         sidebar: false,
         guide: false
       },
+      searchParams: {
+        guide: null
+      },
       guide: null
     }
   },
   mounted () {
     this.$nextTick(function () {
+      this.searchParams = this.getFiltersFromUrl(this.searchParams, true);
       this.loadSidebar();
     });
   },
@@ -66,10 +73,10 @@ export default {
         var component = new component().$mount()
         sidebar.innerHTML = '';
         sidebar.appendChild(component.$el)
-        if(this.currentPage == null) {
+        if(this.searchParams.guide == null) {
           sidebar.querySelector('li a').click();
         } else {
-          this.loadGuide(this.currentPage);
+          this.loadGuide(this.searchParams.guide);
         }
         this.loading.sidebar = false;
       }, error => {
@@ -78,6 +85,8 @@ export default {
       });
     },
     loadGuide: function(guide) {
+      this.searchParams.guide = guide;
+      this.updateUrlHash(this.searchParams);
       this.guide = null;
       this.loading.guide = true;
       this.$http.get('/guides/' + guide + '.cshtml').then(response => {
