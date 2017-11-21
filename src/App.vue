@@ -83,7 +83,7 @@ export default {
       guide.innerHTML = '';
       this.loading.guide = true;
       this.$http.get('/guides/' + page + '.cshtml').then(response => {
-        var regex = new RegExp(/@{[\S\s]*}|@.*/, 'g');
+        var regex = new RegExp(/@{[\S\s]*}|@model.*/, 'g');
         var models = [];
         var matches;
         while (matches = regex.exec(response.body)) {
