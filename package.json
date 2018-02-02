@@ -6,7 +6,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "server": "node server.js",
+    "vue": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "dev": "run-p server vue",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
@@ -25,7 +27,9 @@
     "babel-preset-stage-3": "^6.24.1",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
+    "express-refresh": "0.0.3",
     "file-loader": "^1.1.4",
+    "npm-run-all": "^4.1.2",
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
     "webpack": "^3.6.0",
