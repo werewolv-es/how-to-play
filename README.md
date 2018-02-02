@@ -4,7 +4,7 @@ These pages are C# Razor syntax, but anyone with basic HTML understanding should
 
 Even without much knowledge, it should be obvious what is markup and what is text. Looking at existing pages should give someone enough of an idea of what is possible.
 
-Indivual guides are within `Guides`, the sidebar is located within `Shared`.
+Individual guides are within `Guides`.
 
 This is not a full solution, and no compilation is provided, they will be copied into the main werewolv.es site when updates are made.
 
