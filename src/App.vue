@@ -43,7 +43,8 @@ export default {
       searchParams: {
         guide: null
       },
-      guide: null
+      guide: null,
+      data: null
     }
   },
   mounted () {
@@ -59,6 +60,7 @@ export default {
       sidebar.innerHTML = '';
       this.loading.sidebar = true;
       this.$http.get('/sidebar').then(response => {
+        this.data = response.body;
         var template = document.createElement('div');
         var wrapper = document.createElement('div');
         response.body.forEach(section => createLinks(wrapper, section));
@@ -86,8 +88,7 @@ export default {
       function createLinks(wrapper, section) {
         var h4 = document.createElement('h4');
         if(section.template != null) {
-          // <a @click="loadGuide(\'$3$4\')">$1</a>
-          h4.innerHTML = `<a id="${section.id}" @click="loadGuide('${section.template}')">${section.name}</a>`;
+          h4.innerHTML = `<a id="${section.id}" @click="loadGuide('${section.id}')" data-template="${section.template}">${section.name}</a>`;
         } else {
           h4.innerHTML = section.name;
         }
@@ -96,7 +97,7 @@ export default {
         var ul = document.createElement('ul');
         section.guides.forEach(guide => {
           var li = document.createElement('li');
-          li.innerHTML = `<a id="${guide.id}" @click="loadGuide('${guide.template}')">${guide.name}</a>`;
+          li.innerHTML = `<a id="${guide.id}" @click="loadGuide('${guide.id}')" data-template="${guide.template}">${guide.name}</a>`;
           ul.appendChild(li);
         });
         wrapper.appendChild(ul);
@@ -107,7 +108,8 @@ export default {
       this.updateUrlHash(this.searchParams);
       this.guide = null;
       this.loading.guide = true;
-      this.$http.get('/guides/' + guide).then(response => {
+      var template = document.getElementById(guide).getAttribute('data-template');
+      this.$http.get(`/guides/${template}`).then(response => {
         var regex = new RegExp(/@{[\S\s]*}|@model.*/, 'g');
         var models = [];
         var matches;
@@ -118,12 +120,12 @@ export default {
         template.className = 'background-cover';
         template.innerHTML = response.body.replace(regex, '');
         var modelInfo = document.createElement('div');
-        modelInfo.className = 'background-cover model-info' + (models.length > 0 ? '' : 'missing-info');
+        modelInfo.className = `background-cover model-info${(models.length > 0 ? '' : 'missing-info')}`;
         modelInfo.innerHTML = models.length > 0 ? models.join('<br/>') : 'Missing model info.';
-        this.guide = '<div>' + modelInfo.outerHTML + template.outerHTML + '</div>'
+        this.guide = `<div>${modelInfo.outerHTML}${template.outerHTML}</div>`;
         this.loading.guide = false;
       }, error => {
-        this.guide = '<div class="background-cover missing-info">Error loading "' + guide + '".</div>';
+        this.guide = `<div class="background-cover missing-info">Error loading "${guide}".</div>`;
         this.loading.guide = false;
       });
     }
