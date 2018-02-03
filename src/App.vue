@@ -110,7 +110,7 @@ export default {
       this.loading.guide = true;
       var template = document.getElementById(guide).getAttribute('data-template');
       this.$http.get(`/guides/${template}`).then(response => {
-        var regex = new RegExp(/@{[\S\s]*}|@model.*/, 'g');
+        var regex = new RegExp(/@{[\S\s]+?}|@model.*/, 'g');
         var models = [];
         var matches;
         while (matches = regex.exec(response.body)) {
