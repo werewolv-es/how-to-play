@@ -13,5 +13,3 @@ This is not a full solution, and no compilation is provided, they will be copied
 Included is a simple viewer for the guide, to give you an idea of how it'll look on the main site. It requires [Node.js](https://nodejs.org/) to run. Run `npm install` within the main folder to install the required dependencies, then  `npm run dev` to open the guide viewer in the browser on port `8080`.
 
 _Note:_ The viewer does not understand Razor syntax, though it will display the common header information for each guide page.
-
-If you wish to view a guide that exists in the folder but not the sidebar, simply change the URL to `http://localhost:8080/#guide={guidename}`, replacing `{guidename}` with the file name without the extension.
