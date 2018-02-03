@@ -20,7 +20,7 @@ async function sidebar(req, res) {
     .find()
     .each(guide => {
       general.guides.push({
-        name: getParent(guide),
+        name: formatName(getParent(guide)),
         id: path.parse(guide).name,
         template: `General/${getTemplate(guide)}`
       });
@@ -53,7 +53,7 @@ async function sidebar(req, res) {
       factionRoles.forEach(factionRole => {
         const roleName = path.parse(factionRole).name;
         roleFaction.guides.push({
-          name: roleName.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()).trim(),
+          name: formatName(roleName),
           id: roleName,
           template: `Roles/${getTemplate(factionRole)}`
         })
@@ -71,6 +71,10 @@ function getParent(file) {
 
 function getTemplate(file) {
   return path.join(getParent(file), path.basename(file)).replace(new RegExp(`\\${path.sep}`, 'g'), '/')
+}
+
+function formatName(name) {
+  return name.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()).trim()
 }
 
 app.set('json spaces', 2);
