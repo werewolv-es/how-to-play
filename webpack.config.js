@@ -49,7 +49,13 @@ module.exports = {
     historyApiFallback: true,
     noInfo: true,
     overlay: true,
-    port: 8080
+    port: 8080,
+    proxy: {
+      "/sidebar": {
+        target: "http://localhost:8081",
+        pathRewrite: {"^/sidebar" : ""}
+      }
+    }
   },
   performance: {
     hints: false

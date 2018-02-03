@@ -58,14 +58,13 @@ export default {
       var sidebar = document.getElementById('sidebar');
       sidebar.innerHTML = '';
       this.loading.sidebar = true;
-      this.$http.get('/shared/_Sidebar.cshtml').then(response => {
+      this.$http.get('/sidebar').then(response => {
         var template = document.createElement('div');
-        template.innerHTML = response.body.replace(/@Html.ActionLink\("(.+)", ("(.+)", new { controller = "Guides" }|"Index", new { .* id = "(.+)" })\)/g, '<a @click="loadGuide(\'$3$4\')">$1</a>');
-        [].forEach.call(template.querySelectorAll('script, ins'),function(e){
-            e.parentNode.removeChild(e);
-        });
+        var wrapper = document.createElement('div');
+        response.body.forEach(section => createLinks(wrapper, section));
+        template.appendChild(wrapper);
         var component = Vue.extend({
-          template: template.outerHTML,
+          template,
           methods: {
             loadGuide: this.loadGuide
           }
@@ -74,7 +73,7 @@ export default {
         sidebar.innerHTML = '';
         sidebar.appendChild(component.$el)
         if(this.searchParams.guide == null) {
-          sidebar.querySelector('li a').click();
+          document.getElementById(response.body[0].guides[0].id).click();
         } else {
           this.loadGuide(this.searchParams.guide);
         }
@@ -83,13 +82,32 @@ export default {
         this.guide = '<div class="background-cover missing-info">Error loading sidebar.</div>';
         this.loading.sidebar = false;
       });
+
+      function createLinks(wrapper, section) {
+        var h4 = document.createElement('h4');
+        if(section.template != null) {
+          // <a @click="loadGuide(\'$3$4\')">$1</a>
+          h4.innerHTML = `<a id="${section.id}" @click="loadGuide('${section.template}')">${section.name}</a>`;
+        } else {
+          h4.innerHTML = section.name;
+        }
+        wrapper.appendChild(h4);
+
+        var ul = document.createElement('ul');
+        section.guides.forEach(guide => {
+          var li = document.createElement('li');
+          li.innerHTML = `<a id="${guide.id}" @click="loadGuide('${guide.template}')">${guide.name}</a>`;
+          ul.appendChild(li);
+        });
+        wrapper.appendChild(ul);
+      }
     },
     loadGuide: function(guide) {
       this.searchParams.guide = guide;
       this.updateUrlHash(this.searchParams);
       this.guide = null;
       this.loading.guide = true;
-      this.$http.get('/guides/' + guide + '.cshtml').then(response => {
+      this.$http.get('/guides/' + guide).then(response => {
         var regex = new RegExp(/@{[\S\s]*}|@model.*/, 'g');
         var models = [];
         var matches;

@@ -8,22 +8,25 @@ const generalPath = path.join(basePath, 'General');
 const rolesPath = path.join(basePath, 'Roles');
 
 async function sidebar(req, res) {
-  let general = [];
+  let guides = [];
+  let general = {
+    name: 'General',
+    guides: []
+  };
   await filehound
     .create()
     .paths(generalPath)
     .depth(1)
     .find()
     .each(guide => {
-      general.push({
+      general.guides.push({
         name: getParent(guide),
-        action: path.parse(guide).name,
-        controller: 'Guides',
-        template: getTemplate(guide)
+        id: path.parse(guide).name,
+        template: `General/${getTemplate(guide)}`
       });
     });
+  guides.push(general);
 
-  let roles = [];
   await filehound
     .create()
     .paths(rolesPath)
@@ -35,10 +38,9 @@ async function sidebar(req, res) {
       const factionName = factionFolder.replace(/\d+-/, '');
       let roleFaction = {
         name: `The ${factionName}`,
-        action: 'Index',
-        controller: 'Roles',
+        id: factionName,
         template: `${getTemplate(faction)}.cshtml`,
-        roles: []
+        guides: []
       };
 
       const factionRoles = filehound
@@ -50,21 +52,17 @@ async function sidebar(req, res) {
 
       factionRoles.forEach(factionRole => {
         const roleName = path.parse(factionRole).name;
-        roleFaction.roles.push({
+        roleFaction.guides.push({
           name: roleName.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()).trim(),
-          action: roleName,
-          controller: 'Roles',
-          template: `${factionName}/${getTemplate(factionRole)}`
+          id: roleName,
+          template: `Roles/${getTemplate(factionRole)}`
         })
       });
 
-      roles.push(roleFaction);
+      guides.push(roleFaction);
     });
 
-  return res.json({
-    general,
-    roles
-  });
+  return res.json(guides);
 }
 
 function getParent(file) {
