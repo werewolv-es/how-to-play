@@ -35,7 +35,7 @@ async function sidebar(req, res) {
     .find()
     .each(faction => {
       const factionFolder = path.basename(faction);
-      const factionName = factionFolder.replace(/\d+-/, '');
+      const factionName = formatName(factionFolder);
       let roleFaction = {
         name: `The ${factionName}`,
         id: factionName,
@@ -74,7 +74,7 @@ function getTemplate(file) {
 }
 
 function formatName(name) {
-  return name.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()).trim()
+  return name.replace(/\d+-/, '').replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()).trim()
 }
 
 app.set('json spaces', 2);

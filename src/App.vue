@@ -49,7 +49,7 @@ export default {
   },
   mounted () {
     this.$nextTick(function () {
-      this.searchParams = this.getFiltersFromUrl(this.searchParams, true);
+      this.searchParams = this.getFiltersFromUrl(this.searchParams);
       this.loadSidebar();
     });
   },
