@@ -7,7 +7,7 @@
 
 <h2>Revenant</h2>
 
-<p>The Revenant is a member of the Undead. The Revenant has 3 corpses that start off as dead players when the games starts. As the game progresses, the Revenant can swap dead players with these corpses and revive the corpses.</p>
+<p>The Revenant is a member of the Undead. The Revenant has 3 corpses that start off as dead players when the games starts. As the game progresses, the Revenant can revive a corpse with is swapped with a dead player of their choice.</p>
 
 <h3>Role Type</h3>
 <ul>
@@ -20,14 +20,14 @@
 <ul>
     <li>The Revenant is able to revive as long as there is a corpse in the Graveyard</li>
     <li>The Revenant cannot swap a living player with a corpse</li>
-    <li>The Revenant can swap their identity with one of the corpses during the day phase</li>
-    <li>Unlike the Puppets and Zombie, the Corpses DO count for votes and parity count</li>
+    <li>The Revenant can swap their identity with one of the living corpses during the day phase</li>
+    <li>Unlike the Puppets and Zombie, the living Corpses DO count for votes and parity count</li>
     <li>The Revenant can be blocked by the Grave Warden/Courtesan</li>
 </ul>
 
 <h3>Tips for playing Revenant</h3>
 <ul>
-    <li>Like all members of the Undead, the Necromancer is still able to hear their faction night chat whilst in the Graveyard. If there is a Medium alive this can allow passing of information to/from the dead.</li>
+    <li>As the Revenant revives their corpses, the player will need to be more careful of making sure that they use different typing styles to mask any connections between the living corpse and the Revenant.</li>
 </ul>
 
 <h3>History</h3>
