@@ -7,7 +7,7 @@
 
 <h2>Revenant</h2>
 
-<p>The Revenant is a member of the Undead. The Revenant has 3 corpses that start off as dead players when the games starts. As the game progresses, the Revenant can choose a dead player's identity to revive a corpse.</p>
+<p>The Revenant is a member of the Undead. The Revenant has 3 corpses that start off as dead players when the games starts. As the game progresses, the Revenant can choose a dead player at night. In the following morning, the dead player's identity is swapped with the corpse that is revived.</p>
 
 <h3>Role Type</h3>
 <ul>
@@ -19,7 +19,6 @@
 <h3>Notes on the Revenant</h3>
 <ul>
     <li>The Revenant is able to revive as long as there is a corpse in the Graveyard</li>
-    <li>When the Revenant chooses a dead player, that player's identity is swapped with a corpse and the corpse is revived instead</li>
     <li>The Revenant cannot swap a living player with a corpse</li>
     <li>The Revenant can swap their identity with one of the living corpses during the day phase</li>
     <li>Unlike the Puppets and Zombie, the living Corpses DO count for votes and parity count</li>
