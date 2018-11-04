@@ -20,6 +20,7 @@
 <ul>
     <li>The Revenant is able to revive as long as there is a corpse in the Graveyard</li>
     <li>The Revenant cannot swap a living player with a corpse</li>
+    <li>The corpses are revealed as "Member of the Undead" to the Seer</li>
     <li>The Revenant can swap their identity with one of the living corpses during the day phase</li>
     <li>Unlike the Puppets and Zombie, the living Corpses DO count for votes and parity count</li>
     <li>If the Revenant dies, the living corpses will die the following night</li>
