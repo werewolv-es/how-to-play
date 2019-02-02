@@ -1,0 +1,36 @@
+@model dynamic
+
+@{
+    ViewBag.Title = "Agitator (The Village) | werewolv.es";
+    Layout = "~/Areas/Guides/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Agitator</h2>
+
+<p>The Agitator is a village-aligned role. Once per game at night they can whip the village into a frenzy and force the village to make two lynches the following day.</p>
+
+<h3>Role Type</h3>
+<ul>
+     <li>The Agitator is seen as member of the village by the Seer.</li>
+     <li>The Agitator is not seen as a user of witchcraft.</li>
+     <li>The Agitator is not seen visiting by the Harlot/Stalker/Familiar.</li>
+ </ul>
+
+<h3>Notes</h3>
+<ul>
+    <li>The village will know the Agitator has used their ability, a message will be sent to the whole village to let them know.</li>
+    <li>Once the Agitator ability has been activated, there will be 2 lynches no matter what, this can not be avoided.</li>
+    <li>If there is a tied or balanced number of votes on the highest vote stacks then a random member of that stack will be lynched.</li>
+	<li>If no players are voted for, 2 players from the whole village will be randomly lynched.</li>
+    <li>Puppets, Zombies and Silenced players behave as normal and their vote doesn't count, which can influence the stacks at the end of the day.</li>
+    <li>Shrouded players count as having 0 votes.</li>
+</ul>
+
+<h3>Tips for playing Agitator</h3>
+<ul>
+    <li>If the village suspects multiple players during a given day, the Agitator can use their ability to help the village lynch two of them the following day.</li>
+    <li>The Agitator ability is strong later in the game when there is more intel, you should think about not using the ability unless there are multiple clear lynch targets.</li>
+</ul>
+
+<h3>History</h3>
+<p>2019-01-01: Agitator introduced in ext-300</p>
