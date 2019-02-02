@@ -1,0 +1,32 @@
+@model dynamic
+
+@{
+    ViewBag.Title = "Cult Leader (Bloodmoon Cult) | werewolv.es";
+    Layout = "~/Areas/Guides/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cult Leader</h2>
+
+<p>The Cult Leader is the leader of the Bloodmoon Cult with the ability to recruit players into the Cult. Once part of the Cult, they can talk to each other in secret at night.</p>
+
+<h3>Role Type</h3>
+<ul>
+	<li>The Cult Leader is afflicted with Lycanthropy.</li>
+    <li>The Cult Leader is seen as member of the Wolfpack by the Seer.</li>
+    <li>The Cult Leader is not seen as a user of witchcraft.</li>
+    <li>The Cult Leader is seen visiting by the Harlot/Stalker/Familiar.</li>
+ </ul>
+
+<h3>Notes</h3>
+<ul>
+    <li>The Cult Leader is limited to 2 recruits per game.</li>
+    <li>The Cult Leader can only recruit players afflicted by Lycanthropy.</li>
+    <li>The Cult Leader will be killed if they try to recruit a non-villager with a killing power (including all Werewolves).</li>
+    <li>The Cult Leader has the same recruitment restrictions as other recruiters, and they are not able to recruit any player who already have a night-faction (Familiar, Coven member, Undead member, Masons, Illuminati, Inquisition Member), but will not be killed if they try. This failed recruit does not count towards the ability use limit.</li>
+    <li>The recruited villager retains their original ability.</li>
+    <li>The recruited villager is notified that they have been recruited in the morning and who recruited them, but not who any other Cult members may be.</li>
+    <li>The Cult Leader gets a notification if a successful recruit has been made. No notification is given if the recruit is unsuccessful, but in that case the Cult Leader can draw their own conclusion...</li>
+</ul>
+
+<h3>History</h3>
+<p>2019-01-01: CultLeader introduced in ext-300</p>
