@@ -1,0 +1,29 @@
+@model dynamic
+
+@{
+    ViewBag.Title = "How to Play | werewolv.es";
+    Layout = "~/Areas/Guides/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Killing & Dying</h2>
+
+<p>In this game there are many ways in which someone can die, a majority of them being that person being killed by someone else. This section explains the different ways in which people can die, the distinct types of kills, and their interaction with other game mechanics.</p>
+
+<h3>Dying</h3>
+<p> First, we define what it means to die in-game. Dying means that the identity you're currently controlling is in the Graveyard instead of in the Village (this is seen in the village panel). This means that you can neither talk in the Village day chat nor in the night chat of your faction. You are also unable to use your role abilities or Items. There are some exceptions to these rules within the Undead faction, consult the corresponding pages if you want to know more. All deaths are resolved during a change of phase, the lynch is resolved when entering the Night phase, all other deaths are resolved when entering the Day phase. It is impossible to die during the Day or Night phase (except for being smited by a moderator).</p> 
+
+<h3>Kill/Death types</h3>
+<p> The various ways of dying and their characteristics are given in overview here. Killing mechanics are separated from other types of dying.</p>
+
+<p><strong>Kill types:</strong</p>
+<ul>
+    <li>The <strong>Wolf-Type Kill</strong>. Cannot kill any person with night immunity. Can be protected against by protective roles/Items. The killer will acquire the Items of their victim if the kill is succesful.</li>
+    <li>The <strong>Witch-Type Kill</strong>. Cannot kill any person with night immunity. Cannot be protected against by protective roles/Items. The killer will acquire the Items of their victim if the kill is succesful.</li>
+    <li>The <strong>Demon-Type Kill</strong>. Nothing can protect against this type of kill. <i>Such a strong power would never be seen in a game, right?</i>
+</ul>
+
+<p><strong>Other Death types:</strong</p>
+<ul>
+  <li>The <strong>Role Self-Kill</strong>. This type of death occurs in the game whenever a role should die under certain conditions, e.g. a sacrificing Messiah or a starving Maplewolf. The role self-kill cannot be prevented by night immunity or any other protective measure.</li>
+</ul>
+
