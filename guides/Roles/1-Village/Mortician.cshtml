@@ -1,0 +1,36 @@
+@model dynamic
+
+@{
+    ViewBag.Title = "Mortician (The Village) | werewolv.es";
+    Layout = "~/Areas/Guides/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Mortician</h2>
+
+<p>The Mortician is able to discover the exact method used to kill a player. The Mortician is also able to determine if the dead player is a member of the Undead.</p>
+
+<h3>Role Type</h3>
+<ul>
+  <li>The Mortician is seen as member of the village by the Seer.</li>
+  <li>The Mortician is not seen as a user of witchcraft.</li>
+  <li>The Mortician is seen visiting by the Harlot/Stalker/Familiar.</li>
+  <li>The Mortician is not seen as a killer by the Adjudicator.</li>
+ </ul>
+
+<h3>Notes</h3>
+<ul>
+    <p>These are the specific reports that a Mortician receives for checking a dead player:</p>
+      <li>Killed by a Wolf: "Mauled by pointy claws".</li>
+      <li>Killed by a Militia: "Shot to the head".</li>
+      <li>Killed by a Voodoo Doctor: "The brain was missing".</li>
+      <li>Killed by a Vampire: "Drained of blood".</li>
+      <li>Killed by lynching: "Hung by the Neck".</li>
+      <li>Killed by a Witch: "Killed by Magic".</li>
+      <li>Killed by a Furie: "Killed by Magic".</li>
+      <li>If the player died by any other means, the report will be "Undetermined".</li>
+</ul>
+
+<h3>Tips for playing Mortician</h3>
+<ul>
+    <li>Since the report for checking a lynched player is always the same as compared to night kills, you should only dig a lynched player if you have suspicions that they might be an Undead member or to confirm a swap of a previously-checked player.</li>
+</ul>
