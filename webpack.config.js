@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+var VueLoader = require('vue-loader')
 
 module.exports = {
   entry: './src/main.js',
@@ -8,6 +9,9 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js'
   },
+  plugins: [
+    new VueLoader.VueLoaderPlugin()
+  ],
   module: {
     rules: [
       {
