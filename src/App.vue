@@ -1,26 +1,43 @@
 <template>
-  <div id="app">
+  <div>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header">
+      <div class="container">
+        <div class="navbar-header">
           <button type="button" class="navbar-toggle" @click="loadSidebar">
             <span class="sr-only">Refresh</span>
             <i class="fa fa-refresh" v-bind:class="{ 'fa-spin': loading.sidebar || loading.guide }"></i>
           </button>
 					<div v-show="loading.sidebar || loading.guide" class="navbar-brand">
-						<img src="http://werewolv.es/Content/Images/ajax-loader.gif" style="display:inline;" /> ...... loading
+						<img src="https://werewolv.es/Content/Images/ajax-loader.gif" style="display:inline;" /> ...... loading
 					</div>
-					<a v-show="!loading.sidebar && !loading.guide" class="navbar-brand" href="/" style="display: none;">werewolv.es</a>
-				</div>
+          <div v-show="!loading.sidebar && !loading.guide">
+            <a class="navbar-brand">werewolv.es</a>
+            <a href="#guide-info" data-toggle="drawer" data-parent="#navbar" aria-foldedopen="false" class="navbar-button hidden-md hidden-lg">Guide Menu</a>
+          </div>
+        </div>
 			</div>
 		</nav>
 		<div class="container-fluid" style="margin-bottom: 2em;">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-md-9" id="guide" v-html="guide">
+					<div class="col-xs-12 col-md-9">
+            <div class="background-cover" id="guide" v-html="guide">
+              &nbsp;
+            </div>
 					</div>
-					<div class="col-xs-12 col-md-3" id="sidebar">
+					<div class="hidden-xs hidden-sm col-md-3" id="sidebar">
 					</div>
+          <div id="guide-info" class="drawer drawer-right dw-xs-10 dw-sm-6 dw-md-4 fold">
+              <div class="drawer-contents">
+                <div class="drawer-heading">
+                  <a class="pull-right" href="#guide-info" data-toggle="drawer" aria-controls="drawerExample"><i class="fa fa-close fa-lg"></i></a>
+                  <div id="sidebar">
+                  </div>
+                </div>
+                <div class="drawer-body">
+                </div>
+              </div>
+          </div>
 				</div>
 			</div>
 		</div>
@@ -56,8 +73,9 @@ export default {
   methods: {
     loadSidebar: function() {
       this.guide = null;
-      var sidebar = document.getElementById('sidebar');
-      sidebar.innerHTML = '';
+      document.querySelectorAll('#sidebar').forEach(sidebar => {
+        sidebar.innerHTML = '';
+      });
       this.loading.sidebar = true;
       this.$http.get('/sidebar').then(response => {
         this.data = response.body;
@@ -71,9 +89,11 @@ export default {
             loadGuide: this.loadGuide
           }
         });
-        var component = new component().$mount()
-        sidebar.innerHTML = '';
-        sidebar.appendChild(component.$el)
+        document.querySelectorAll('#sidebar').forEach(sidebar => {
+          var mounted = new component().$mount();
+          sidebar.innerHTML = '';
+          sidebar.appendChild(mounted.$el)
+        });
         if(this.searchParams.guide == null) {
           document.getElementById(response.body[0].guides[0].id).click();
         } else {
