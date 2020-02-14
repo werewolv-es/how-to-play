@@ -12,11 +12,37 @@ name: Cupid
 menu: Never
 ---
 
-## Cupid
+# Cupid
 
 Nope.
 
-### Reasons
+## Reasons
 
 It's dumb.
+```
+
+## Setup
+
+Install [Node.js](https://nodejs.org/en/) (see `.nvmrc` for suggested version). Then:
+
+```sh
+npm i # yarn
+```
+
+### Preview your changes in realtime
+
+```sh
+npm run dev # yarn dev
+```
+
+## Build a static copy
+
+```sh
+npm run build # yarn build
+```
+
+### Preview the built copy
+
+```sh
+npm run serve # yarn serve
 ```

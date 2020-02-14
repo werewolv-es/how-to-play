@@ -1,15 +1,10 @@
-.DS_Store
-node_modules/
-dist/
-npm-debug.log
-yarn-error.log
-package-lock.json
+# gatsby files
+.cache/
+public
+.docz/
 
-# Editor directories and files
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.ipynb
-*~
+# dependencies
+node_modules
+
+# environment files
+.envrc
