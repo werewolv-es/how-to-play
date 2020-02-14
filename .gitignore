@@ -1,6 +1,6 @@
-# gatsby files
+# gatsby/docz files
 .cache/
-public
+public/
 .docz/
 
 # dependencies

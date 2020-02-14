@@ -1,5 +1,6 @@
 export default {
   base: '/guides/',
+  description: 'How to Play guide for werewolv.es',
   files: 'src/**/*.{md,markdown,mdx}',
   menu: [{
       name: 'General',
@@ -8,8 +9,8 @@ export default {
         'Items',
         'Rules',
         'Victory Conditions',
-        'Buttons And Abilities',
-        'Tips For Playing Werewolf Online',
+        'Buttons & Abilities',
+        'Tips',
         'Community Guidelines'
       ]
     },
@@ -21,6 +22,7 @@ export default {
     'The Neutral',
     'The Bloodmoon Cult'
   ],
+  public: '/static',
   themeConfig: {
     initialColorMode: 'dark'
   },
