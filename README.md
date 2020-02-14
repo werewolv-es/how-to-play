@@ -10,6 +10,7 @@ Guide files are stored within `docs`. Each guide is written in Markdown and has 
 ---
 name: Cupid
 menu: The Neutral
+route: /cupid
 ---
 
 # Cupid
