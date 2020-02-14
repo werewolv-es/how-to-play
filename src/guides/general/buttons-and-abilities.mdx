@@ -4,6 +4,9 @@ menu: General
 route: /buttons-and-abilities
 ---
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser, faInfoCircle, faUsers, faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
+
 # Buttons & Abilities
 
 ## Navigation
@@ -11,15 +14,15 @@ route: /buttons-and-abilities
 During any game there are 3 buttons located on the top bar to show and
 hide information during the game. These are:
 
-  - **: pressing this will make the **identity panel** appear or
+  - **<FontAwesomeIcon icon={faUser} /><FontAwesomeIcon icon={faInfoCircle} />:** pressing this will make the **identity panel** appear or
     disappear. You can find essential information about your role,
     objectives, and abilities, on this panel.
-  - **: pressing this will make the **village panel** appear or
+  - **<FontAwesomeIcon icon={faUsers} />:** pressing this will make the **village panel** appear or
     disappear. Here you can see which players are still alive, which
     players are dead (listed in the Graveyard). Vote and other ability
     buttons will also appear here (see below). The number next to the
     icon tells you how many players are alive at that moment.
-  - **: pressing this will open the **calendar panel** and allow you to
+  - **<FontAwesomeIcon icon={faCalendarAlt} />:** pressing this will open the **calendar panel** and allow you to
     access the chat archive for previous days and nights. Days and
     nights with the same number are grouped together under the same day.
     The number next to the icon tells you which day (or corresponding

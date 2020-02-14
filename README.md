@@ -2,7 +2,7 @@
 
 Standalone How To Play site for [werewolv.es](https://werewolv.es).
 
-# Writing guides
+## Writing guides
 
 Guide files are stored within `docs`. Each guide is written in Markdown and has a heading section to set the name of the guide, here's a super-basic example:
 
@@ -17,12 +17,12 @@ route: /cupid
 
 Nope.
 
-# Reasons
+## Reasons
 
 It's dumb.
 ```
 
-# Setup
+## Setup
 
 Install [Node.js](https://nodejs.org/en/) (see `.nvmrc` for suggested version). Then:
 
@@ -30,20 +30,26 @@ Install [Node.js](https://nodejs.org/en/) (see `.nvmrc` for suggested version). 
 npm i # yarn
 ```
 
-# Preview your changes in realtime
+## Preview your changes in realtime
 
 ```sh
 npm run dev # yarn dev
 ```
 
-# Build as a static site
+## Build as a static site
 
 ```sh
 npm run build # yarn build
 ```
 
-# Preview the built site
+## Preview the built site
 
 ```sh
 npm run serve # yarn serve
+```
+
+or if you haven't ran `build` yet:
+
+```sh
+npm run preview # yarn preview
 ```
