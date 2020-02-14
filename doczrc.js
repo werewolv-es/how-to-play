@@ -2,10 +2,10 @@ export default {
   base: '/guides/',
   description: 'How to Play guide for werewolv.es',
   files: 'src/**/*.{md,markdown,mdx}',
-  menu: [{
+  menu: [{ // anything not listed here will be sorted automatically
       name: 'General',
       menu: [
-        'Online Werewolf Basics',
+        'Basics',
         'Items',
         'Rules',
         'Victory Conditions',
@@ -14,13 +14,13 @@ export default {
         'Community Guidelines'
       ]
     },
-    'The Village',
-    'The Wolfpack',
-    'The Coven',
-    'The Vampires',
-    'The Undead',
-    'The Neutral',
-    'The Bloodmoon Cult'
+    { name: 'The Village', menu: ['Village'] },
+    { name: 'The Wolfpack', menu: ['Wolfpack'] },
+    { name: 'The Coven', menu: ['Coven'] },
+    { name: 'The Vampires', menu: ['Vampires'] },
+    { name: 'The Undead', menu: ['Undead'] },
+    { name: 'The Neutral', menu: ['Neutral'] },
+    { name: 'The Bloodmoon Cult', menu: ['Bloodmoon Cult'] }
   ],
   public: '/static',
   themeConfig: {
