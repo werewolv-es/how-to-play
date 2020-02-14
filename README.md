@@ -9,14 +9,14 @@ Guide files are stored within `docs`. Each guide is written in Markdown and has 
 ```markdown
 ---
 name: Cupid
-menu: Never
+menu: Neutral
 ---
 
 # Cupid
 
 Nope.
 
-## Reasons
+# Reasons
 
 It's dumb.
 ```
@@ -29,19 +29,19 @@ Install [Node.js](https://nodejs.org/en/) (see `.nvmrc` for suggested version). 
 npm i # yarn
 ```
 
-### Preview your changes in realtime
+## Preview your changes in realtime
 
 ```sh
 npm run dev # yarn dev
 ```
 
-## Build a static copy
+## Build as a static site
 
 ```sh
 npm run build # yarn build
 ```
 
-### Preview the built copy
+## Preview the built site
 
 ```sh
 npm run serve # yarn serve

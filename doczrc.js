@@ -1,7 +1,7 @@
 export default {
   base: '/guides/',
-  menu: [ // determines order
-    {
+  files: 'src/**/*.{md,markdown,mdx}',
+  menu: [{
       name: 'General',
       menu: [
         'Online Werewolf Basics',
@@ -11,18 +11,18 @@ export default {
         'Buttons And Abilities',
         'Tips For Playing Werewolf Online',
         'Community Guidelines'
-      ],
-      'The Village',
-      'The Wolfpack',
-      'The Coven',
-      'The Vampires',
-      'The Undead',
-      'The Neutral',
-      'The Bloodmoon Cult'
-    ],
-    themeConfig: {
-      initialColorMode: 'dark',
-      showMarkdownEditButton: false
+      ]
     },
-    title: 'werewolv.es'
-  }
+    'The Village',
+    'The Wolfpack',
+    'The Coven',
+    'The Vampires',
+    'The Undead',
+    'The Neutral',
+    'The Bloodmoon Cult'
+  ],
+  themeConfig: {
+    initialColorMode: 'dark'
+  },
+  title: 'werewolv.es'
+}
