@@ -19,7 +19,8 @@
     "dev": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "preview": "npm run build && npm run serve"
+    "preview": "npm run build && npm run serve",
+    "pretty": "pretty-quick"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",

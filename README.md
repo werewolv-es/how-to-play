@@ -19,12 +19,12 @@ Nope.
 
 ## Reasons
 
-It's dumb.
+It dumb.
 ```
 
 ## Setup
 
-Install [Node.js](https://nodejs.org/en/) (see `.nvmrc` for suggested version). Then:
+Install [Node.js](https://nodejs.org/en/) (see `.nvmrc` for suggested version, latest LTS should be fine). Then run:
 
 ```sh
 npm i # yarn
@@ -48,8 +48,16 @@ npm run build # yarn build
 npm run serve # yarn serve
 ```
 
-or if you haven't ran `build` yet:
+or if you haven't run `build` yet:
 
 ```sh
 npm run preview # yarn preview
+```
+
+## Prettify
+
+Automatically done before a commit, or manually with:
+
+```sh
+npm run pretty # yarn pretty
 ```
