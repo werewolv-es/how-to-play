@@ -9,7 +9,7 @@ Guide files are stored within `docs`. Each guide is written in Markdown and has 
 ```markdown
 ---
 name: Cupid
-menu: Neutral
+menu: The Neutral
 ---
 
 # Cupid
