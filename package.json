@@ -33,9 +33,16 @@
     "gatsby-plugin-sharp": "^2.2.18",
     "gatsby-theme-docz": "latest",
     "gatsby-transformer-sharp": "^2.2.7",
+    "husky": "^4.2.3",
+    "pretty-quick": "^2.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet-async": "^1.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
