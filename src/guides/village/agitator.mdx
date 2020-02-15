@@ -4,6 +4,8 @@ menu: The Village
 route: /agitator
 ---
 
+import { Timeline, Event } from 'react-trivial-timeline';
+
 # Agitator
 
 The Agitator is a village-aligned role. Once per game at night they can whip the village into a frenzy and force the village to make 2 lynches the following day.
@@ -32,6 +34,9 @@ The Agitator is a village-aligned role. Once per game at night they can whip the
 
 ## History
 
-2019-01-01: Agitator introduced in ext-300
-
-2019-12-03: Corrected visitor interaction in Role Type
+<Timeline lineColor="white">
+  <Event interval="2019-12-03">
+    Corrected visitor interaction in Role Type
+  </Event>
+  <Event interval="2019-01-01">Introduced in ext-300</Event>
+</Timeline>

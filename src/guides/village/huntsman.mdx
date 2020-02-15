@@ -4,6 +4,8 @@ menu: The Village
 route: /huntsman
 ---
 
+import { Timeline, Event } from 'react-trivial-timeline';
+
 # Huntsman
 
 The Huntsman is a brave villager who risks their own life in protecting other village members. At night, the Huntsman can guard a player of their choosing. If that person is attacked by the Wolfpack, the Huntsman and the killing wolf will die.
@@ -35,4 +37,11 @@ The Huntsman is a brave villager who risks their own life in protecting other vi
 
 ## History
 
-2019-03-12: Updated text regarding the Huntsman guarding a Vampire's target. This reflects a change that was made in on 2018-12-14 which made night killing and protection interactions more consistent.
+<Timeline lineColor="white">
+  <Event interval="2019-01-01">
+    Updated text regarding the Huntsman guarding a Vampire's target
+  </Event>
+  <Event interval="2018-12-14">
+    Made night killing and protection interactions more consistent
+  </Event>
+</Timeline>

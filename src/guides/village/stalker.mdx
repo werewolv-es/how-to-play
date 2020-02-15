@@ -4,6 +4,8 @@ menu: The Village
 route: /stalker
 ---
 
+import { Timeline, Event } from 'react-trivial-timeline';
+
 # Stalker
 
 The Stalker can follow one player during the night. In the morning, the Stalker will get a report telling them who their target visited last night.
@@ -32,4 +34,6 @@ The Stalker can follow one player during the night. In the morning, the Stalker 
 
 ## History
 
-2018-11-29: Stalker changed so it that no longer sees self visits
+<Timeline lineColor="white">
+  <Event interval="2018-11-29">No longer sees self visits</Event>
+</Timeline>
