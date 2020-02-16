@@ -20,7 +20,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "preview": "npm run build && npm run serve",
-    "pretty": "pretty-quick"
+    "pretty": "pretty-quick",
+    "deploy:beta": "surge public --domain h2p-beta.surge.sh"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
@@ -47,5 +48,8 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
+  },
+  "devDependencies": {
+    "surge": "^0.21.3"
   }
 }
