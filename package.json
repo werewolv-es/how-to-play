@@ -21,7 +21,7 @@
     "serve": "gatsby serve",
     "preview": "npm run build && npm run serve",
     "pretty": "pretty-quick",
-    "deploy:beta": "npm run build && surge public --domain h2p-beta.surge.sh"
+    "deploy:beta": "npm run build && surge public --domain https://h2p-beta.surge.sh"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
