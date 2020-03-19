@@ -25,8 +25,5 @@ export default {
     { name: 'The Bloodmoon Cult', menu: ['Bloodmoon Cult'] },
   ],
   public: '/static',
-  themeConfig: {
-    initialColorMode: 'dark',
-  },
   title: 'werewolv.es',
 };
