@@ -24,7 +24,7 @@ const themeConfig = merge(defaultTheme, {
     background: '',
     header: {
       bg: '#f1f1f1',
-      border: '#d2d2d2',
+      border: '#d2d2d2'
     },
     link: '#337ab7',
     sidebar: {
@@ -34,7 +34,7 @@ const themeConfig = merge(defaultTheme, {
       navLink: '#337ab7',
       navLinkActive: '#000',
       tocLink: '#337ab7',
-      tocLinkActive: '#000',
+      tocLinkActive: '#000'
     },
     text: '#000',
     modes: {
@@ -42,7 +42,7 @@ const themeConfig = merge(defaultTheme, {
         background: '#000',
         header: {
           bg: '#222',
-          border: '#222',
+          border: '#222'
         },
         link: '#337ab7',
         sidebar: {
@@ -52,13 +52,13 @@ const themeConfig = merge(defaultTheme, {
           navLink: '#337ab7',
           navLinkActive: '#fafad2',
           tocLink: '#337ab7',
-          tocLinkActive: '#fafad2',
+          tocLinkActive: '#fafad2'
         },
-        text: '#fafad2',
-      },
-    },
+        text: '#fafad2'
+      }
+    }
   },
-  initialColorMode: 'dark',
+  initialColorMode: 'dark'
 });
 
 export default theme(themeConfig)(Theme);

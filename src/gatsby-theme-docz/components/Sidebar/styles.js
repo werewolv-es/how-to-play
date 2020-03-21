@@ -2,7 +2,7 @@
 import {
   global as globalStyle,
   overlay as overlayStyle,
-  wrapper as wrapperStyle,
+  wrapper as wrapperStyle
 } from '~components/Sidebar/styles';
 import { merge } from 'lodash/fp';
 
@@ -12,5 +12,5 @@ export const overlay = overlayStyle;
 
 export const wrapper = ({ open }) =>
   merge(wrapperStyle({ open }), {
-    overflow: 'hidden auto',
+    overflow: 'hidden auto'
   });

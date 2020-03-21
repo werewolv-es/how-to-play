@@ -1,10 +1,10 @@
 # gatsby/docz files
 .cache/
-public/
 .docz/
+public/
 
 # dependencies
-node_modules
+node_modules/
 
 # environment files
 .envrc

@@ -13,8 +13,8 @@ export default {
         'Victory Conditions',
         'Buttons & Abilities',
         'Tips',
-        'Community Guidelines',
-      ],
+        'Community Guidelines'
+      ]
     },
     { name: 'The Village', menu: ['Village'] },
     { name: 'The Wolfpack', menu: ['Wolfpack'] },
@@ -22,8 +22,8 @@ export default {
     { name: 'The Vampires', menu: ['Vampires'] },
     { name: 'The Undead', menu: ['Undead'] },
     { name: 'The Neutral', menu: ['Neutral'] },
-    { name: 'The Bloodmoon Cult', menu: ['Bloodmoon Cult'] },
+    { name: 'The Bloodmoon Cult', menu: ['Bloodmoon Cult'] }
   ],
   public: '/static',
-  title: 'werewolv.es',
+  title: 'werewolv.es'
 };

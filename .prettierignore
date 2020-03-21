@@ -1,0 +1,4 @@
+.cache/
+.docz/
+node_modules/
+public/

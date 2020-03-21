@@ -20,7 +20,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "preview": "npm run build && npm run serve",
-    "pretty": "pretty-quick",
+    "pretty": "pretty-quick --pattern '**/*.{js,mdx}'",
     "deploy:beta": "npm run build && surge public --domain https://h2p-beta.surge.sh"
   },
   "dependencies": {
@@ -35,8 +35,6 @@
     "gatsby-plugin-sharp": "^2.5.1",
     "gatsby-theme-docz": "latest",
     "gatsby-transformer-sharp": "^2.4.1",
-    "husky": "^4.2.3",
-    "pretty-quick": "^2.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -44,12 +42,14 @@
     "react-trivial-timeline": "^1.2.2",
     "styled-components": "^5.0.1"
   },
+  "devDependencies": {
+    "husky": "^4.2.3",
+    "pretty-quick": "^2.0.1",
+    "surge": "^0.21.3"
+  },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "pretty-quick --pattern '**/*.{js,mdx}' --staged"
     }
-  },
-  "devDependencies": {
-    "surge": "^0.21.3"
   }
 }
