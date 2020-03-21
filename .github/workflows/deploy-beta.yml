@@ -14,5 +14,5 @@ jobs:
         uses: actions/setup-node@v1.1.0
         with:
           node-version: lts
-      - run: npm install
+      - run: npm ci
       - run: npm run deploy:beta -- --token ${{ secrets.SURGE_TOKEN }}
