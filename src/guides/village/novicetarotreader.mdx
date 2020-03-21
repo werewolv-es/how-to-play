@@ -1,0 +1,77 @@
+---
+name: Novice Tarot Reader
+menu: The Village
+route: /novicetarotreader
+---
+
+import { Timeline, Event } from 'react-trivial-timeline';
+
+# Novice Tarot Reader
+
+The Novice Tarot Reader is a member of the Village. They are able to select two players at night to draw cards from. Five cards will be drawn, two of which correspond to each player chosen. A random card will be drawn that corresponds to a random player. The order of the cards drawn are randomized.
+
+Each card reflects one of three facets - alignment, killing ability, and witchcraft status. There are some cards that can be interpreted in two ways, for example, Magician meaning both a witchcraft user and a Coven member.
+
+## Alignment Cards
+
+<dl>
+  <dt>Innocence</dt>
+  <dd>A member of the Village, or the Direwolf</dd>
+  <dt>Hound</dt>
+  <dd>A member of the Wolfpack, Blood Moon Cult, or a Lycan Villager</dd>
+  <dt>Magician</dt>
+  <dd>A member of the Coven</dd>
+  <dt>Wood</dt>
+  <dd>A Puppet, held by the Coven's Puppetmaster</dd>
+  <dt>Balanced Scales</dt>
+  <dd>A Neutral player, such as the Drunk</dd>
+  <dt>Death</dt>
+  <dd>A member of the Undead</dd>
+  <dt>Chains</dt>
+  <dd>A member of the Damned</dd>
+  <dt>Brains</dt>
+  <dd>A Zombie, part of the Undead</dd>
+  <dt>Brimstone</dt>
+  <dd>A member of the Demons</dd>
+  <dt>Shadow</dt>
+  <dd>A member of any faction not listed above, such as the Vampires</dd>
+</dl>
+
+## Killing Ability
+
+<dl>
+  <dt>Death</dt>
+  <dd>Capable of killing</dd>
+  <dt>Dove</dt>
+  <dd>Incapable of killing</dd>
+</dl>
+
+## Witchcraft Ability
+
+<dl>
+  <dt>Magician</dt>
+  <dd>User of Witchcraft</dd>
+  <dt>Labourer</dt>
+  <dd>Incapable of Witchcraft</dd>
+</dl>
+
+## Role Type
+
+- The Novice Tarot Reader is seen as member of the village by the Seer.
+- The Novice Tarot Reader is seen as a user of witchcraft.
+- The Novice Tarot Reader is seen visiting by the Harlot/Stalker/Familiar.
+- The Novice Tarot Reader is not seen as a killer by the Adjudicator.
+
+## Notes
+
+- Items are factored into the card readings. For example, a Milita (who does not use witchcraft) that is holding a Rune (causing witchcraft status to other witchcraft-detecting roles), may cause a Magician card to be drawn. Similarly, a Seer with a crossbow may cause a Death card to appear.
+
+## Tips
+
+- People may be distrusting of a Novice Tarot Reader, as the card reads can be intentionally made vague to force opponents to claim a role that is difficult to get the village to believe without evidence.
+
+## History
+
+<Timeline lineColor="white">
+  <Event interval="2018-01-01">Introduced in ext-350</Event>
+</Timeline>
