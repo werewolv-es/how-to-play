@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Build
+
     steps:
       - uses: actions/checkout@v2.0.0
       - name: Build
@@ -15,4 +15,13 @@ jobs:
         with:
           node-version: lts
       - run: npm ci
+      - name: Lint
+        uses: creyD/prettier_action@v2.1
+        with:
+          dry: true # no GITHUB_TOKEN yet
+          prettier_options: '--write "**/*.{js,mdx}"'
+          branch: ${{ github.head_ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build
       - run: npm run build
