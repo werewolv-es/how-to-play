@@ -8,14 +8,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     name: Build and Deploy Beta
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2.0.0
+
       - name: Setup Node
         uses: actions/setup-node@v1.1.0
         with:
           node-version: lts
+
       - name: Install Packages
         run: npm ci
+
       - name: Build and Deploy
         run: npm run deploy:beta -- --token ${{ secrets.SURGE_TOKEN }}
