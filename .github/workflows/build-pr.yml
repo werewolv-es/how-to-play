@@ -17,6 +17,8 @@ jobs:
           node-version: lts
       - name: Install Packages
         run: npm ci
+      - name: Build
+        run: npm run build
       - name: Prettify
         uses: creyD/prettier_action@v2.1
         with:
@@ -25,5 +27,3 @@ jobs:
           branch: ${{ github.head_ref }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build
-        run: npm run build
