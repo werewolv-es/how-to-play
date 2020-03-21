@@ -7,20 +7,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    - name: Pull and install
-    - steps:
+    name: Pull and install
+    steps:
       - uses: actions/checkout@v2.0.0
-      - name: Install
       - uses: actions/setup-node@v1.1.0
         with:
           node-version: lts
-        run: npm ci
-      - name: Lint
+      - run: npm ci
       - uses: creyD/prettier_action@v2.1
         with:
           prettier_options: '--write "**/*.{js,mdx}"'
           branch: ${{ github.head_ref }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build
       - run: npm run build
