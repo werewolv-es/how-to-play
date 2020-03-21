@@ -7,17 +7,23 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Pull and install
+    name: Prettify and Build
     steps:
+      - name: Checkout
       - uses: actions/checkout@v2.0.0
+      - name: Setup Node
       - uses: actions/setup-node@v1.1.0
         with:
           node-version: lts
+      - name: Install Packages
       - run: npm ci
+      - name: Prettify
       - uses: creyD/prettier_action@v2.1
         with:
+          dry: true
           prettier_options: '--write "**/*.{js,mdx}"'
           branch: ${{ github.head_ref }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build
       - run: npm run build
