@@ -25,6 +25,7 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v2.0.0
+        if: success()
 
       - name: Setup Node
         uses: actions/setup-node@v1.1.0
