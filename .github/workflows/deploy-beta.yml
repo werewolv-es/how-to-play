@@ -14,12 +14,12 @@ jobs:
     steps:
       - name: Check if deployment requested
         uses: khan/pull-request-comment-trigger@master
-          id: check
-          with:
-            trigger: '!deploy'
-            reaction: rocket
-          env:
-            GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+        id: check
+        with:
+          trigger: '!deploy'
+          reaction: rocket
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
       - run: 'echo Deploying to beta'
         if: github.event_name == 'pull_request' || steps.check.outputs.triggered == 'true'
 
