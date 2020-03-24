@@ -1,0 +1,14 @@
+FROM node AS install
+WORKDIR /app
+COPY ./.nvmrc package*.json /app/
+RUN npm install
+
+FROM install AS build
+COPY *.js /app/
+COPY src /app/src
+COPY static /app/static
+RUN npm run build
+
+FROM nginx:mainline-alpine AS nginx
+COPY --from=build /app/public/ /usr/share/nginx/html
+EXPOSE 80
