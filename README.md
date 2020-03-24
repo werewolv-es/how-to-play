@@ -1,6 +1,6 @@
 # werewolves-how-to-play
 
-Standalone How To Play site for [werewolv.es](https://werewolv.es).
+The official [How To Play](https://werewolv.es/guides) guide repo for [werewolv.es](https://werewolv.es).
 
 ## Writing guides
 
