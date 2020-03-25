@@ -39,7 +39,6 @@ jobs:
           UPDATE_URL: "${{ secrets.UPDATE_URL }}"
 
       - name: Build
-        if: steps.check_vars.outputs.HAS_REGISTRY_DATA
         run: npm run build
 
       - name: Build and Deploy to Docker Registry
