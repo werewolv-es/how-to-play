@@ -25,10 +25,6 @@ jobs:
         id: check_vars
         shell: bash
         run: |
-          unset HAS_SURGE_TOKEN
-          if [ ! -z $SURGE_TOKEN ]; then HAS_SURGE_TOKEN='true' ; fi
-          echo ::set-output name=HAS_SURGE_TOKEN::${HAS_SURGE_TOKEN}
-
           unset HAS_REGISTRY_DATA
           if [ ! -z $DOCKER_REGISTRY -a ! -z $DOCKER_USERNAME -a ! -z $DOCKER_PASSWORD ]; then HAS_REGISTRY_DATA='true' ; fi
           echo ::set-output name=HAS_REGISTRY_DATA::${HAS_REGISTRY_DATA}
@@ -37,19 +33,14 @@ jobs:
           if [ ! -z $UPDATE_URL ]; then HAS_UPDATE_URL='true' ; fi
           echo ::set-output name=HAS_UPDATE_URL::${HAS_UPDATE_URL}
         env:
-          SURGE_TOKEN: "${{ secrets.SURGE_TOKEN }}"
           DOCKER_REGISTRY: "${{ secrets.DOCKER_REGISTRY }}"
           DOCKER_USERNAME: "${{ secrets.DOCKER_USERNAME }}"
           DOCKER_PASSWORD: "${{ secrets.DOCKER_PASSWORD }}"
           UPDATE_URL: "${{ secrets.UPDATE_URL }}"
 
       - name: Build
-        if: steps.check_vars.outputs.HAS_SURGE_TOKEN || steps.check_vars.outputs.HAS_REGISTRY_DATA
+        if: steps.check_vars.outputs.HAS_REGISTRY_DATA
         run: npm run build
-
-      - name: Deploy to Surge
-        if: steps.check_vars.outputs.HAS_SURGE_TOKEN
-        run: npm run deploy:beta:surge -- --token ${{ secrets.SURGE_TOKEN }}
 
       - name: Build and Deploy to Docker Registry
         uses: mr-smithers-excellent/docker-build-push@v2
