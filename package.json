@@ -9,11 +9,11 @@
     "guide"
   ],
   "bugs": {
-    "url": "https://github.com/kirschstein/werewolves-how-to-play/issues"
+    "url": "https://github.com/werewolv-es/how-to-play/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kirschstein/werewolves-how-to-play.git"
+    "url": "https://github.com/werewolv-es/how-to-play.git"
   },
   "scripts": {
     "dev": "gatsby develop",
