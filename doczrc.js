@@ -25,5 +25,6 @@ export default {
     { name: 'The Bloodmoon Cult', menu: ['Bloodmoon Cult'] }
   ],
   public: '/static',
-  title: 'werewolv.es'
+  title: 'werewolv.es',
+  editBranch: 'site'
 };
