@@ -24,7 +24,7 @@ export const link = {
   color: 'header.text',
   fontWeight: 400,
   lineHeight: '25px',
-  paddingLeft: 30,
+  marginLeft: 30,
   textDecoration: 'none',
   ':hover': {
     color: 'primary'
