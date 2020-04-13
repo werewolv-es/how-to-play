@@ -16,10 +16,6 @@ export const headerButton = styles.headerButton;
 
 export const editButton = styles.editButton;
 
-export const global = styles.global;
-
-export const overlay = styles.overlay;
-
 export const link = {
   color: 'header.navLink',
   fontWeight: 400,
