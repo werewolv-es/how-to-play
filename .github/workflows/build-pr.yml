@@ -27,6 +27,7 @@ jobs:
       - name: Prettify
         uses: creyD/prettier_action@v2.1
         with:
-          prettier_options: '--write **/*.{js,mdx} --loglevel debug'
+          dry: true
+          prettier_options: '--write {.,src/}**/*.{js,mdx}'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

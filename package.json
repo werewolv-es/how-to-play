@@ -20,7 +20,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "preview": "npm run build && npm run serve",
-    "pretty": "pretty-quick --pattern '**/*.{js,mdx}'",
+    "pretty": "pretty-quick --pattern '{.,src/}**/*.{js,mdx}'",
     "deploy:beta:surge": "surge public --domain https://h2p-beta.surge.sh",
     "deploy:beta": "npm run build && npm run deploy:beta:surge"
   },
@@ -50,7 +50,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --pattern '**/*.{js,mdx}' --staged"
+      "pre-commit": "pretty-quick --pattern '{.,src/}**/*.{js,mdx}' --staged"
     }
   }
 }
