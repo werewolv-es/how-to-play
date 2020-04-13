@@ -26,6 +26,8 @@ const themeConfig = merge(defaultTheme, {
       bg: '#f1f1f1',
       border: '#d2d2d2',
       text: '#000',
+      navLink: '#000',
+      navLinkActive: 'rgb(157, 157, 157)',
       button: {
         bg: '#f1f1f1',
         color: '#000'
@@ -49,6 +51,8 @@ const themeConfig = merge(defaultTheme, {
           bg: '#222',
           border: '#222',
           text: 'rgb(157, 157, 157)',
+          navLink: 'rgb(157, 157, 157)',
+          navLinkActive: '#fff',
           button: {
             bg: '#222',
             color: '#fafad2'

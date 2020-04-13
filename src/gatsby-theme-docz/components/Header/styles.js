@@ -21,12 +21,12 @@ export const global = styles.global;
 export const overlay = styles.overlay;
 
 export const link = {
-  color: 'header.text',
+  color: 'header.navLink',
   fontWeight: 400,
   lineHeight: '25px',
   marginLeft: 30,
   textDecoration: 'none',
   ':hover': {
-    color: 'primary'
+    color: 'header.navLinkActive'
   }
 };
