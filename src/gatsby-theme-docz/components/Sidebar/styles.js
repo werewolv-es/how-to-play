@@ -1,16 +1,12 @@
 // https://github.com/doczjs/docz/blob/master/core/gatsby-theme-docz/src/components/Sidebar/styles.js
-import {
-  global as globalStyle,
-  overlay as overlayStyle,
-  wrapper as wrapperStyle
-} from '~components/Sidebar/styles';
+import * as styles from '~components/Sidebar/styles';
 import { merge } from 'lodash/fp';
 
-export const global = globalStyle;
+export const global = styles.global;
 
-export const overlay = overlayStyle;
+export const overlay = styles.overlay;
 
 export const wrapper = ({ open }) =>
-  merge(wrapperStyle({ open }), {
+  merge(styles.wrapper({ open }), {
     overflow: 'hidden auto'
   });

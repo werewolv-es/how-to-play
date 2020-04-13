@@ -1,30 +1,32 @@
 // https://github.com/doczjs/docz/blob/master/core/gatsby-theme-docz/src/components/Header/styles.js
-import {
-  wrapper as wrapperStyle,
-  innerContainer as innerContainerStyle,
-  menuIcon as menuIconStyle,
-  menuButton as menuButtonStyle,
-  headerButton as headerButtonStyle,
-  editButton as editButtonStyle,
-  global as globalStyle,
-  overlay as overlayStyle
-} from '~components/Header/styles';
+import * as styles from '~components/Header/styles';
 import { merge } from 'lodash/fp';
 
-export const wrapper = wrapperStyle;
+export const wrapper = styles.wrapper;
 
-export const innerContainer = merge(innerContainerStyle, {
+export const innerContainer = merge(styles.innerContainer, {
   height: 40
 });
 
-export const menuIcon = menuIconStyle;
+export const menuIcon = styles.menuIcon;
 
-export const menuButton = menuButtonStyle;
+export const menuButton = styles.menuButton;
 
-export const headerButton = headerButtonStyle;
+export const headerButton = styles.headerButton;
 
-export const editButton = editButtonStyle;
+export const editButton = styles.editButton;
 
-export const global = globalStyle;
+export const global = styles.global;
 
-export const overlay = overlayStyle;
+export const overlay = styles.overlay;
+
+export const link = {
+  color: 'header.text',
+  fontWeight: 400,
+  lineHeight: '25px',
+  paddingLeft: 30,
+  textDecoration: 'none',
+  ':hover': {
+    color: 'primary'
+  }
+};
