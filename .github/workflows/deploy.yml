@@ -27,7 +27,7 @@ jobs:
       - name: Build and Deploy to Docker Registry
         uses: mr-smithers-excellent/docker-build-push@v2
         with:
-          image: wwes/h2p
+          image: wwes-public/h2p
           tag: latest
           registry: ${{ secrets.DOCKER_REGISTRY }}
           dockerfile: .github/workflows/Dockerfile.deploy
