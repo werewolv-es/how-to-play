@@ -9,7 +9,7 @@ const Wrapper = ({ children, doc }) => {
     <React.Fragment>
       <Helmet>
         <meta charSet="utf-8" />
-        <link rel="canonical" href={doc.value.route} />
+
         <link
           rel="apple-touch-icon"
           href={`${config.base}apple-touch-icon.png`}

@@ -17,7 +17,7 @@
   },
   "scripts": {
     "dev": "gatsby develop",
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
     "preview": "npm run build && npm run serve",
     "pretty": "pretty-quick --pattern '{.,src/}**/*.{js,mdx}'",
