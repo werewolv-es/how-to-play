@@ -28,7 +28,6 @@ jobs:
         uses: creyD/prettier_action@v2.1
         with:
           dry: true
-          prettier_options: '--write **/*.{js,mdx}'
-          branch: ${{ github.head_ref }}
+          prettier_options: '--write {.,src/}**/*.{js,mdx}'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

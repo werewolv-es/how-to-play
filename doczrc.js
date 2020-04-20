@@ -1,10 +1,11 @@
 export default {
   base: '/guides/',
   description: 'How to Play guide for werewolv.es',
+  editBranch: 'site',
   files: 'src/**/*.{md,markdown,mdx}',
   menu: [
     {
-      // anything not listed here will be sorted automatically
+      // anything not listed here will be sorted alphabetically after these entries
       name: 'General',
       menu: [
         'Basics',
@@ -25,6 +26,5 @@ export default {
     { name: 'The Bloodmoon Cult', menu: ['Bloodmoon Cult'] }
   ],
   public: '/static',
-  title: 'werewolv.es',
-  editBranch: 'site'
+  title: 'werewolv.es'
 };
