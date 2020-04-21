@@ -29,9 +29,9 @@ export const Header = props => {
       <div sx={styles.innerContainer}>
         <Flex>
           <Logo />
-          <Link to="/" sx={styles.link}>
+          <a href="/" sx={styles.link}>
             Lobby
-          </Link>
+          </a>
         </Flex>
         <Flex>
           {repository && (
