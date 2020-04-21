@@ -1,0 +1,10 @@
+# gatsby/docz files
+.cache/
+.docz/
+public/
+
+# dependencies
+node_modules/
+
+# environment files
+.envrc
