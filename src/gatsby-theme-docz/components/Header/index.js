@@ -29,8 +29,8 @@ export const Header = props => {
       <div sx={styles.innerContainer}>
         <Flex>
           <Logo />
-          <a href="/" sx={styles.link}>
-            Lobby
+          <a href="https:://werewolv.es" sx={styles.link}>
+            Play Online Werewolf
           </a>
         </Flex>
         <Flex>
