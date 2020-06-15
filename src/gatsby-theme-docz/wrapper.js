@@ -47,6 +47,10 @@ const Wrapper = ({ children, doc }) => {
         <meta name="apple-mobile-web-app-title" content={config.title} />
         <meta name="application-name" content={config.title} />
         <meta name="theme-color" content="#000000" />
+        <link
+          rel="canonical"
+          href="https://werewolv.es/guides/how-to-play-online-werewolf"
+        />
       </Helmet>
       {children}
     </React.Fragment>
