@@ -46,7 +46,15 @@ const Wrapper = ({ children, doc }) => {
         />
         <meta name="apple-mobile-web-app-title" content={config.title} />
         <meta name="application-name" content={config.title} />
+        <meta
+          name="description"
+          content="Official How to Play guide for online werewolf, a web based version of the party game Mafia, aka Werewolf. Contains role descriptions, tips and strategy for playing"
+        />
         <meta name="theme-color" content="#000000" />
+        <link
+          rel="canonical"
+          href="https://werewolv.es/guides/how-to-play-online-werewolf"
+        />
       </Helmet>
       {children}
     </React.Fragment>
