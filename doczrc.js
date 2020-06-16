@@ -1,5 +1,5 @@
 export default {
-  base: '/guides/',
+  base: '/',
   description: 'How to Play guide for werewolv.es',
   editBranch: 'site',
   files: 'src/**/*.{md,markdown,mdx}',
