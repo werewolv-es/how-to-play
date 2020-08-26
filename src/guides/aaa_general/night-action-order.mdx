@@ -1,0 +1,34 @@
+---
+name: Basics
+menu: Night Action Order
+route: /night-action-order
+---
+
+# Order of Night Actions
+
+The different abilities roles have at night may influence each other. How they do is determined by the order in which the night actions are defined to take place. The order of night actions is:
+
+1. Redirects (Succubus)
+1. Roleblocks (Direwolf, Courtesan, Manacles of Spite)
+1. Protection visits (Protector, Huntsman, Shaman, Armour, Heavy Shield)
+1. Most visits (Too many to list: all visits not belonging in another category, including items)
+1. Item thefts from abilities and potions
+1. Kills (Killing werewolf (Werewolf/Alphawolf/Shapeshifter), Vampire, Witch, Militia), including resulting item thefts
+1. Report visits to Stalkers, Harlots, Familiar
+1. Passing of items
+1. Swap Identities (Djinn, Shapeshifter)
+1. Report kills to village
+1. Report revives to village
+
+Multiple actions that fall in the same category are executed more or less simultaneously. Conflicts between such actions are resolved in the following manner:
+
+- Redirects and identity swaps occur in a determinsitic, server-defined order, which may cause them to be unpredictable if two or more such actions
+  target the same player.
+- If a player is roleblocked multiple times, they will receive one message for each roleblock, but receive no additional effect.
+- Protection visits stack - the player is protected by all sources protecting them, and if a player is attacked, all associated effects trigger.
+- If multiple players attempt to steal from the same target with the same priority of action, no items are stolen.
+- If multiple players successfully kill the same target, all effects attached to all kills trigger.
+
+Some general points: nightly abilities will still take place even if the role is killed that night, as the majority of abilities and actions happen simultaneously. This also holds for all identity-swapping abilities (Djinn, Shapeshifter) just as for other abilities. The important point to note here is that, by the time the identities of players are swapped, the game has already determined who is going to be killed that night. Thus identity-swapping abilities can never change which _player_ will die in the night, but they can change which _character_ will be reported dead at dawn. For example: if a Shapeshifter is targeted by some killing ability, they cannot escape their fate by shifting into some other character that night.
+
+Note that all roles get reports on the situation before identity-swapping abilities, meaning that your information is possibly outdated by the time you receive it.
