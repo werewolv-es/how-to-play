@@ -22,12 +22,11 @@ The different abilities roles have at night may influence each other. How they d
 
 Multiple actions that fall in the same category are executed more or less simultaneously. Conflicts between such actions are resolved in the following manner:
 
-- Redirects and identity swaps occur in a determinsitic, server-defined order, which may cause them to be unpredictable if two or more such actions
-  target the same player.
+- Redirects and identity swaps occur in a determinsitic, server-defined order, which may cause them to act unpredictably if two or more such actions target the same player.
 - If a player is roleblocked multiple times, they will receive one message for each roleblock, but receive no additional effect.
-- Protection visits stack - the player is protected by all sources protecting them, and if a player is attacked, all associated effects trigger.
-- If multiple players attempt to steal from the same target with the same priority of action, no items are stolen.
-- If multiple players successfully kill the same target, all effects attached to all kills trigger.
+- Protection visits overlap - the target receives no personal benefit from being protected multiple times, but if the target is attacked, all associated effects trigger.
+- If multiple players attempt to steal from the same target with an ability or potion, no items are stolen.
+- If multiple players successfully kill the same target, the single cause of that kill (and thus who gets any stolen items) will be attributed to a single killer in a deterministic, server-defined order, but all on-success actions for that kill will still trigger.
 
 Some general points: nightly abilities will still take place even if the role is killed that night, as the majority of abilities and actions happen simultaneously. This also holds for all identity-swapping abilities (Djinn, Shapeshifter) just as for other abilities. The important point to note here is that, by the time the identities of players are swapped, the game has already determined who is going to be killed that night. Thus identity-swapping abilities can never change which _player_ will die in the night, but they can change which _character_ will be reported dead at dawn. For example: if a Shapeshifter is targeted by some killing ability, they cannot escape their fate by shifting into some other character that night.
 
