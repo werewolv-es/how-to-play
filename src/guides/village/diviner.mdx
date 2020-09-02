@@ -1,0 +1,37 @@
+---
+name: Diviner
+menu: The Village
+route: /roles/Diviner
+---
+
+import { Timeline, Event } from 'react-trivial-timeline';
+
+# Diviner
+
+The Diviner can check a visit a player at night to learn about the presence of magic between that player and their two neighbours on the player list.
+
+## Role Type
+
+- The Diviner is seen as member of the village by the Seer.
+- The Diviner is seen as a user of Witchcraft.
+- The Diviner is seen visiting by the Stalker/Familiar.
+- The Diviner is not seen as a killer by the Adjudicator.
+
+## Notes
+
+- The Diviner can sense if their target or one of their neighbours uses witchcraft. This wraps around the player list, so if the Diviner were to target the top player, the resulting check would include the bottom player.
+- If the Diviner is a neighbour of their target, their ability will not work, and they will be roleblocked.
+- If one of the Diviner's target and their neighbours use Witchcraft, they will detect a weak presence of magic.
+- If two or three of the Diviner's target and their neighbours use Witchcraft, they will detect a strong presence of magic.
+
+## Tips
+
+- The Diviner can gather a large amount of information over the course of a few nights. Cross-referenced with other information during the day, they may be able to confirm certain players as telling the truth or as lying about their role.
+- The lack of clarity in a Diviner's check means that they may want to include at least one trusted, peferably non-witchcraft using player in the area that they are targeting. This will allow them to ascertain the use of witchcraft for the other players in the area more accurately.
+- The Diviner must be careful not to force important village roles that use witchcraft to reveal themselves, such as the Seer or Protector. They are better used as a role for confirmation or contradiction of existing claims.
+
+## History
+
+<Timeline lineColor="white">
+  <Event interval="2020-08-02">Introduced in ext-380</Event>
+</Timeline>
