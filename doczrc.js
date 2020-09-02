@@ -13,6 +13,7 @@ export default {
         'Rules',
         'Victory Conditions',
         'Buttons & Abilities',
+        'Night Action Order',
         'Tips',
         'Community Guidelines'
       ]
