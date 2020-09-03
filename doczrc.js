@@ -13,6 +13,7 @@ export default {
         'Rules',
         'Victory Conditions',
         'Buttons & Abilities',
+        'Night Action Order',
         'Tips',
         'Community Guidelines'
       ]
@@ -23,7 +24,8 @@ export default {
     { name: 'The Vampires', menu: ['Vampires'] },
     { name: 'The Undead', menu: ['Undead'] },
     { name: 'The Neutral', menu: ['Neutral'] },
-    { name: 'The Bloodmoon Cult', menu: ['Bloodmoon Cult'] }
+    { name: 'The Bloodmoon Cult', menu: ['Bloodmoon Cult'] },
+    { name: 'Holiday Roles', menu: ['Holiday Roles'] }
   ],
   public: '/static',
   title: 'werewolv.es'
