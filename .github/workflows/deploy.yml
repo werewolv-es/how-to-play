@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.0.0
+        uses: actions/checkout@v2.3.4
 
       - name: Setup Node
-        uses: actions/setup-node@v1.1.0
+        uses: actions/setup-node@v2.1.2
         with:
           node-version: lts
 
@@ -25,7 +25,7 @@ jobs:
         run: npm run build
 
       - name: Build and Deploy to Docker Registry
-        uses: mr-smithers-excellent/docker-build-push@v2
+        uses: mr-smithers-excellent/docker-build-push@v5
         with:
           image: wwes-public/h2p
           tag: latest
@@ -35,7 +35,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Call update webhook
-        uses: joelwmale/webhook-action@1.0.0
+        uses: joelwmale/webhook-action@2.0.2
         env:
-          WEBHOOK_URL: ${{ secrets.UPDATE_URL }}
-          data: "{'commit': '${{ github.sha }}'}"
+          url: ${{ secrets.UPDATE_URL }}
+          headers: "{'commit': '${{ github.sha }}'}"
