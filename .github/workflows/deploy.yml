@@ -25,10 +25,10 @@ jobs:
         run: npm run build
 
       - name: Build and Deploy to Docker Registry
-        uses: mr-smithers-excellent/docker-build-push@v4
+        uses: mr-smithers-excellent/docker-build-push@v5
         with:
           image: wwes-public/h2p
-          tag: latest
+          tags: latest
           registry: ${{ secrets.DOCKER_REGISTRY }}
           dockerfile: .github/workflows/Dockerfile.deploy
           username: ${{ secrets.DOCKER_USERNAME }}
@@ -36,6 +36,6 @@ jobs:
 
       - name: Call update webhook
         uses: joelwmale/webhook-action@2.0.2
-        env:
+        with:
           url: ${{ secrets.UPDATE_URL }}
-          headers: "{'commit': '${{ github.sha }}'}"
+          body: "{'commit': '${{ github.sha }}'}"
