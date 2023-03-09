@@ -50,11 +50,6 @@ const config = {
           },
           {
             tagName: "link",
-            rel: "icon",
-            href: "/img/docusaurus.png",
-          },
-          {
-            tagName: "link",
             rel: "apple-touch-icon",
             href: "/apple-touch-icon.png",
             sizes: "180x180",
@@ -91,11 +86,6 @@ const config = {
             id: "favicon",
             rel: "shortcut icon",
             href: "/favicon.ico",
-          },
-          {
-            tagName: "meta",
-            name: "theme-color",
-            content: "rgb(37, 194, 160)",
           },
           {
             tagName: "meta",
