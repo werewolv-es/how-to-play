@@ -7,7 +7,6 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "werewolv.es",
-  tagline: "Dinosaurs are cool",
   favicon: "favicon.ico",
 
   // Set the production url of your site here
@@ -42,8 +41,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/werewolv-es/how-to-play/edit/site/src/guides/",
+          editUrl: "https://github.com/werewolv-es/how-to-play/edit/site/",
         },
         blog: false,
         theme: {
@@ -56,22 +54,24 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: "dark",
+        respectPrefersColorScheme: true,
+      },
       // Replace with your project's social card
       // image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: "werewolv.es",
         logo: {
           alt: "werewolv.es",
-          src: "safari-pinned-tab.svg",
+          src: "favicon-32x32.png",
         },
         items: [
-          // {
-          //   type: 'doc',
-          //   docId: 'intro',
-          //   position: 'left',
-          //   label: 'Tutorial',
-          // },
-          { to: "/", label: "Play Online Werewolf", position: "left" },
+          {
+            to: "https://werewolv.es",
+            label: "Play Online Werewolf",
+            position: "left",
+          },
           {
             href: "https://github.com/werewolv-es/how-to-play",
             label: "GitHub",
@@ -86,6 +86,9 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      tableOfContents: {
+        maxHeadingLevel: 2
+      }
     }),
 };
 
