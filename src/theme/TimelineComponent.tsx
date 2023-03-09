@@ -4,7 +4,7 @@ import { Timeline as TrivialTimeline, Event as Event } from 'react-trivial-timel
 
 export default function TimelineComponent({ children }: { children: Event }) {
   return(
-    <TrivialTimeline lineColor="#337ab7">
+    <TrivialTimeline lineColor="#ab5500">
       {children}
     </TrivialTimeline>
   )
