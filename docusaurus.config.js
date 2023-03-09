@@ -17,8 +17,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "werewolv-es", // Usually your GitHub org/user name.
-  projectName: "how-to-play", // Usually your repo name.
+  // organizationName: "werewolv-es", // Usually your GitHub org/user name.
+  // projectName: "how-to-play", // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
