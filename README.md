@@ -22,45 +22,29 @@ Nope.
 It dumb.
 ```
 
-## Setup
+### Installation
 
-Install [Node.js](https://nodejs.org/en/) (see `.nvmrc` for suggested version, latest LTS should be fine). Then run:
+This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
-```sh
-npm i # yarn
+```
+$ yarn
 ```
 
-## Preview your changes in realtime
+### Local Development
 
-```sh
-npm run dev # yarn dev
+```
+$ yarn start
 ```
 
-## Build as a static site
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-```sh
-npm run build # yarn build
+### Build
+
+```
+$ yarn build
 ```
 
-## Preview the built site
-
-```sh
-npm run serve # yarn serve
-```
-
-or if you haven't run `build` yet:
-
-```sh
-npm run preview # yarn preview
-```
-
-## Prettify
-
-Automatically done before a commit, or manually with:
-
-```sh
-npm run pretty # yarn pretty
-```
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
 ## Docker
 

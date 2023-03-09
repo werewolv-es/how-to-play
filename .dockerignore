@@ -1,9 +1,8 @@
-# gatsby/docz files
-.cache/
-.docz/
-
-# dependencies
 node_modules/
-
-# environment files
 .envrc
+.vscode
+.github
+CODEOWNERS
+Dockerfile
+pull_request_template.md
+README.md
