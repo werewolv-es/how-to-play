@@ -28,6 +28,6 @@ jobs:
         uses: creyD/prettier_action@v4.2
         with:
           dry: true
-          prettier_options: '--write {.,src/}**/*.{js,mdx}'
+          prettier_options: '--write {..docs/,src/}**/*.{js,ts,jsx,tsx,md,mdx}'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
