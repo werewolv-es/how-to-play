@@ -74,7 +74,8 @@ const config = {
           },
           {
             href: "https://github.com/werewolv-es/how-to-play",
-            label: "GitHub",
+            "aria-label": "GitHub",
+            className: 'github-link',
             position: "right",
           },
         ],
