@@ -87,8 +87,8 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       tableOfContents: {
-        maxHeadingLevel: 2
-      }
+        maxHeadingLevel: 2,
+      },
     }),
 };
 
