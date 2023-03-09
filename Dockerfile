@@ -1,10 +1,10 @@
 FROM node AS install
-WORKDIR /app
+WORKDIR /app/
 COPY ./.nvmrc package*.json /app/
-RUN npm install
+RUN npm ci
 
 FROM install AS build
-COPY * /app/
+COPY . /app/
 RUN npm run build
 
 FROM nginx:mainline-alpine AS nginx
