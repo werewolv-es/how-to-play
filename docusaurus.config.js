@@ -31,7 +31,81 @@ const config = {
     locales: ["en"],
   },
 
-  plugins: ['docusaurus-plugin-sass'],
+  plugins: [
+    "docusaurus-plugin-sass",
+    [
+      "@docusaurus/plugin-pwa",
+      {
+        debug: false,
+        offlineModeActivationStrategies: [
+          "appInstalled",
+          "standalone",
+          "queryString",
+        ],
+        pwaHead: [
+          {
+            tagName: "link",
+            rel: "manifest",
+            href: "/manifest.json",
+          },
+          {
+            tagName: "link",
+            rel: "icon",
+            href: "/img/docusaurus.png",
+          },
+          {
+            tagName: "link",
+            rel: "apple-touch-icon",
+            href: "/apple-touch-icon.png",
+            sizes: "180x180",
+          },
+          {
+            tagName: "link",
+            rel: "icon",
+            type: "image/png",
+            href: "/favicon-194x194.png",
+            sizes: "194x194",
+          },
+          {
+            tagName: "link",
+            rel: "icon",
+            type: "image/png",
+            href: "/android-chrome-192x192.png",
+            sizes: "192x192",
+          },
+          {
+            tagName: "link",
+            rel: "icon",
+            type: "image/png",
+            href: "/favicon-16x16.png",
+            sizes: "16x16",
+          },
+          {
+            tagName: "link",
+            rel: "mask-icon",
+            href: "/safari-pinned-tab.svg",
+            color: "#000000",
+          },
+          {
+            tagName: "link",
+            id: "favicon",
+            rel: "shortcut icon",
+            href: "/favicon.ico",
+          },
+          {
+            tagName: "meta",
+            name: "theme-color",
+            content: "rgb(37, 194, 160)",
+          },
+          {
+            tagName: "meta",
+            name: "theme-color",
+            content: "#000000"
+          }
+        ],
+      },
+    ],
+  ],
 
   presets: [
     [
@@ -77,7 +151,7 @@ const config = {
           {
             href: "https://github.com/werewolv-es/how-to-play",
             "aria-label": "GitHub",
-            className: 'github-link',
+            className: "github-link",
             position: "right",
           },
         ],
