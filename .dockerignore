@@ -6,5 +6,4 @@ CODEOWNERS
 Dockerfile
 pull_request_template.md
 README.md
-build/
 .docusaurus/
