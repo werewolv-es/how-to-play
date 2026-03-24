@@ -39,6 +39,14 @@ const config = {
   plugins: [
     "docusaurus-plugin-sass",
     [
+      "@easyops-cn/docusaurus-search-local",
+      {
+        hashed: true,
+        docsRouteBasePath: "/",
+        indexBlog: false,
+      },
+    ],
+    [
       "@docusaurus/plugin-pwa",
       {
         debug: false,
