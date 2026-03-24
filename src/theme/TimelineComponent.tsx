@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { Timeline as TrivialTimeline, Event as Event } from 'react-trivial-timeline';
 

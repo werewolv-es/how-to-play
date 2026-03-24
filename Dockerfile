@@ -1,6 +1,6 @@
-FROM node AS install
+FROM node:24-alpine AS install
 WORKDIR /app/
-COPY ./.nvmrc package*.json /app/
+COPY ./package*.json /app/
 RUN npm ci
 
 FROM install AS build
