@@ -54,3 +54,58 @@ nav.navbar {
 footer.footer {
   display: none;
 }
+
+.timeline ul {
+  max-width: 95%;
+  list-style: none;
+  padding: 0;
+}
+
+.timeline-event {
+  position: relative;
+}
+
+.timeline-event__interval-container {
+  display: flex;
+  flex-direction: row;
+  margin: 1em 0;
+  align-items: center;
+}
+
+.timeline-event__icon {
+  border: 2px solid #ab5500;
+  border-radius: 10px;
+  display: block;
+  width: 1em;
+  height: 1em;
+  background: transparent;
+  flex-shrink: 0;
+}
+
+.timeline-event__interval {
+  margin: 0 0 0 1em;
+  padding: 0.25em 1em;
+  background: #cccccc;
+  color: #000000;
+  border-radius: 1em;
+}
+
+.timeline-event__content {
+  position: relative;
+  margin-left: 2.5em;
+
+  &::before {
+    background-color: #ab5500;
+    content: '';
+    margin-left: 1px;
+    position: absolute;
+    top: 0;
+    left: -2em;
+    width: 2px;
+    height: 100%;
+  }
+}
+
+.timeline-event__title {
+  margin-top: 0;
+}
