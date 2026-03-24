@@ -8,7 +8,7 @@
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy:beta:surge": "surge build --domain https://h2p-beta.surge.sh",
-    "deploy:beta": "npm run build && npm run deploy:beta:surge",
+    "deploy:beta": "cross-env SITE_BASEURL=/ npm run build && npm run deploy:beta:surge",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
@@ -37,6 +37,7 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.9.2",
     "@tsconfig/docusaurus": "2.0.9",
+    "cross-env": "10.1.0",
     "husky": "9.1.7",
     "pretty-quick": "4.2.2",
     "surge": "0.27.3",
