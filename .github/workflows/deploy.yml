@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
-          node-version: lts/*
+          node-version: 24
 
       - name: Install Packages
         run: npm ci
@@ -35,7 +35,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Call update webhook
-        uses: joelwmale/webhook-action@2.3.2
+        uses: joelwmale/webhook-action@2.4.1
         with:
           url: ${{ secrets.UPDATE_URL }}
           body: "{'commit': '${{ github.sha }}'}"
