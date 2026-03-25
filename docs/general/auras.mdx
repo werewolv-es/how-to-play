@@ -1,7 +1,7 @@
 ---
 title: Auras
 slug: /auras
-sidebar_position: 9
+sidebar_position: 3
 ---
 
 # Auras in werewolv.es
@@ -9,36 +9,135 @@ sidebar_position: 9
 Auras are status effects that can be applied to players, modifying their behaviour or abilities during the game. Some auras are applied by moderators at game start as part of the setup, while others are applied through in-game mechanics and items.
 
 :::note
-This page may not cover all auras available in the game.
+This page may not cover all auras in the game.
 :::
 
-## Starting Auras
-
-The following auras can be applied by moderators at game start:
-
 <dl>
+  <dt>AbysmalProtection</dt>
+  <dd>
+    Marks the bearer of an Abysmal Armour. The armour is destroyed when its
+    bearer is killed, but provides no protection from the kill.
+  </dd>
+  <dt>AvatarOfRetribution</dt>
+  <dd>
+    Applied after the player dies while holding an Ankh of Retribution. Their
+    corpse will attempt to kill whoever killed them the following night.
+  </dd>
   <dt>Benign</dt>
-  <dd>Gives the player a -1 modifier to their vote if they are voting for a village-aligned player.</dd>
+  <dd>
+    Gives the player a -1 modifier to their vote if they are voting for a
+    village-aligned player.
+  </dd>
   <dt>Blessed</dt>
   <dd>Blocks undead visitors.</dd>
+  <dt>Blighted</dt>
+  <dd>
+    Rumoured to be a curse mark placed by a Demon Lord or Brethren Fanatic. If
+    the stories are to be believed, it can be ignited in a penetrating kill that
+    bypasses most protections.
+  </dd>
+  <dt>Bloodmark</dt>
+  <dd>
+    Applied by a Bloodletter. Makes the player appear as Wolfpack-aligned to
+    alignment checks and as a killer to investigators for two nights.
+  </dd>
+  <dt>BloodSoaked</dt>
+  <dd>
+    Makes the player appear as a member of a specific faction to alignment
+    checks, depending on the type of Bloody Wreath applied.
+  </dd>
   <dt>Clumsy</dt>
   <dd>Player is unable to activate items.</dd>
   <dt>Concussed</dt>
   <dd>Player has a chance to visit a neighbour of their target instead.</dd>
+  <dt>Concussion</dt>
+  <dd>
+    Applied to the target of a War Hammer. The player may accidentally visit a
+    neighbour of their intended target instead of the target themselves.
+  </dd>
+  <dt>ContagiousBlight</dt>
+  <dd>
+    Allegedly the innate mark of a Brethren Fanatic. Each night, their visits
+    apply the Blighted aura to their targets. Cannot be removed by cleansing.
+  </dd>
+  <dt>Corrected</dt>
+  <dd>
+    Applied by a Mercurial Caduceus. Certain words in the player's day messages
+    are automatically replaced with alternatives chosen by the holder.
+  </dd>
+  <dt>CouncilMember</dt>
+  <dd>Marks the player as a member of the Midnight Council.</dd>
   <dt>Crippled</dt>
   <dd>Player is unable to visit more than 3 players away from them.</dd>
+  <dt>Cursed</dt>
+  <dd>
+    Applied by the Midnight Council. The player's night action is blocked and
+    the aura is removed at the start of the following day.
+  </dd>
   <dt>CursedByFenrir</dt>
-  <dd>Appears as a wolf to alignment checks and can be recruited by the Bloodmoon Cult.</dd>
+  <dd>
+    Appears as a wolf to alignment checks and can be recruited by the Bloodmoon
+    Cult.
+  </dd>
+  <dt>CurseOfFenrir</dt>
+  <dd>Makes the player appear as Wolfpack-aligned to alignment checks.</dd>
   <dt>Damned</dt>
   <dd>Changes a player's win condition to align with any evil faction.</dd>
+  <dt>Decay</dt>
+  <dd>
+    Applied by a Lich to an enemy player. Has a chance each night to block the
+    afflicted player's night action. Grows more powerful as the Lich levels up.
+  </dd>
+  <dt>DemonicDarkness</dt>
+  <dd>
+    Whispers suggest this is applied by a Shadowcaster. Makes the player appear
+    as a Demon to alignment checks.
+  </dd>
+  <dt>DemonicEssence</dt>
+  <dd>
+    In theory, applied by an Abyssal Armour. Makes the player appear as a Demon
+    to alignment checks and grants immunity to night kills and role-blocks.
+  </dd>
   <dt>Doomed</dt>
   <dd>Kills the player.</dd>
   <dt>Enduring</dt>
-  <dd>Prevents any type of death or execution from occurring. Expires when used.</dd>
+  <dd>
+    Prevents any type of death or execution from occurring. Expires when used.
+  </dd>
+  <dt>EnduringSpirit</dt>
+  <dd>
+    Applied while the player holds an Ankh of Possession. If killed at night,
+    their spirit swaps bodies with their killer the following night.
+  </dd>
+  <dt>FenrirsPledge</dt>
+  <dd>
+    Applied by a Warg's Bracer. If a Wolfpack member attempts to kill the
+    player, the kill is blocked and the bracer is destroyed.
+  </dd>
+  <dt>Frozen</dt>
+  <dd>
+    Prevents the player from visiting anyone more than one house away. They may
+    only visit themselves or their immediate neighbours. Visitors to a frozen
+    player have a 1-in-3 chance of also becoming frozen.
+  </dd>
   <dt>Greedy</dt>
   <dd>Player is unable to pass items.</dd>
   <dt>HasAncestralLycanthropy</dt>
-  <dd>Appears as a wolf to alignment checks and can be recruited by the Children of Acer.</dd>
+  <dd>
+    Appears as a wolf to alignment checks and can be recruited by the Children
+    of Acer.
+  </dd>
+  <dt>HoldingWeapon</dt>
+  <dd>
+    Marks the player as a killer to investigative roles while they hold a weapon
+    item.
+  </dd>
+  <dt>ImImmortl</dt>
+  <dd>
+    Applied by the Essence of the Ancient One. The player's day messages are
+    corrupted: random vowels are removed and words are replaced with internet
+    slang.
+  </dd>
   <dt>Incriminated</dt>
   <dd>Will appear as a killer and a witchcraft user to relevant checks.</dd>
   <dt>Inebriated</dt>
@@ -47,30 +146,174 @@ The following auras can be applied by moderators at game start:
   <dd>Removes a player from any night chats.</dd>
   <dt>Maimed</dt>
   <dd>Has a chance to kill the player when they visit others.</dd>
+  <dt>MartyrsProtection</dt>
+  <dd>
+    Applied by a Martyr's Crown holder. If the player is killed at night, the
+    kill is redirected to the Martyr instead.
+  </dd>
   <dt>Merciful</dt>
-  <dd>Gives the player a -1 modifier to their vote if they are voting for a Villager, Sleepwalker, Insomniac, or a Lycan.</dd>
+  <dd>
+    Gives the player a -1 modifier to their vote if they are voting for a
+    Villager, Sleepwalker, Insomniac, or a Lycan.
+  </dd>
   <dt>Merry</dt>
-  <dd>Makes a player behave the same as Drunk, and also has their speech altered.</dd>
+  <dd>
+    Makes a player behave the same as Drunk, and also has their speech altered.
+  </dd>
+  <dt>OverrunByRats</dt>
+  <dd>
+    The player is in the area of a Vermin Talisman's rat swarm. Each night they
+    are role-blocked, item-blocked, and their visits are redirected to a random
+    neighbour. The swarm moves each morning.
+  </dd>
+  <dt>PaxDemocracia</dt>
+  <dd>
+    Applied by an Amulet of Peace. The player cannot be executed by the village.
+    If voted for execution, they escape unharmed.
+  </dd>
   <dt>Persistent</dt>
-  <dd>Gives the player a +1 modifier to their vote if they are voting for the same player they were voting for at the end of the previous day.</dd>
+  <dd>
+    Gives the player a +1 modifier to their vote if they are voting for the same
+    player they were voting for at the end of the previous day.
+  </dd>
+  <dt>PlaguedBySnakes</dt>
+  <dd>
+    The player is in the area of a Serpentine Talisman's snake swarm. Each
+    night, a random player among them and their visitors is poisoned (Serpentine
+    Talisman holders are excluded). The swarm moves each morning.
+  </dd>
   <dt>Poisoned</dt>
-  <dd>Lasts 3 nights. Each night, they have a chance of being role-blocked or dying.</dd>
+  <dd>
+    Lasts 3 nights. Each night, they have a chance of being role-blocked or
+    dying.
+  </dd>
+  <dt>Pollymorphed</dt>
+  <dd>
+    Applied by a Potion of Pollymorph. All words in the player's day messages
+    are replaced with parrot noises for the rest of that day.
+  </dd>
+  <dt>PossessingSpirit</dt>
+  <dd>
+    Applied when the player kills someone holding an Ankh of Possession. The
+    dead player's spirit will swap bodies with them the following night.
+  </dd>
+  <dt>PrimedBearTrap</dt>
+  <dd>
+    A Bear Trap has been set on the player. The next player to visit them will
+    be Crippled (unable to visit more than 3 players away).
+  </dd>
+  <dt>PsychicCommuning</dt>
+  <dd>
+    Applied to a dead player whose spirit is being observed by a Psychic.
+    Everything they send in the graveyard that night is heard by the Psychic.
+  </dd>
+  <dt>ReincarnationSpell</dt>
+  <dd>
+    Applied after dying while holding an Ankh of Reincarnation. The player is
+    being revived and will return to the game the following day.
+  </dd>
+  <dt>Resilience</dt>
+  <dd>
+    Grants the player immunity from role-blocks for one night. The legacy name
+    for Tenacious, applied by older versions of the Potion of Tenacity.
+  </dd>
   <dt>Righteous</dt>
-  <dd>Gives the player a +1 modifier to their vote if they are voting for a player that is not village-aligned.</dd>
+  <dd>
+    Gives the player a +1 modifier to their vote if they are voting for a player
+    that is not village-aligned.
+  </dd>
+  <dt>RiteOfFenrir</dt>
+  <dd>
+    Applied by a Blood Priest. If the player is killed by a Wolfpack member,
+    they survive and join the Wolfpack instead.
+  </dd>
+  <dt>RunicAura</dt>
+  <dd>
+    Applied when using a Rune. Makes the player appear as a witchcraft user to
+    investigators.
+  </dd>
+  <dt>SecondChance</dt>
+  <dd>
+    Applied while the player holds an Ankh of Reincarnation. If killed at night,
+    they will be revived and return to the game the following day.
+  </dd>
+  <dt>Shadow</dt>
+  <dd>
+    Applied by a Shadowcaster. Makes the player appear as a Villager to
+    alignment checks, concealing their true faction.
+  </dd>
   <dt>Spellbound</dt>
-  <dd>Makes the player do an additional visit to a random player each night.</dd>
+  <dd>
+    Makes the player do an additional visit to a random player each night.
+  </dd>
+  <dt>SpittingFeathers</dt>
+  <dd>
+    A lingering effect of being Pollymorphed. Occasional words in the player's
+    day messages are replaced with parrot noises.
+  </dd>
+  <dt>StrengthOfFenrir</dt>
+  <dd>
+    Applied by a Heart of Fenrir. Grants immunity to night kills and
+    role-blocks.
+  </dd>
+  <dt>StrongNeck</dt>
+  <dd>
+    Applied by an Iron Collar. If the player is executed by the village, they
+    survive and the collar is destroyed.
+  </dd>
   <dt>Tenacious</dt>
   <dd>The player is immune to role-block.</dd>
+  <dt>ThreatOfRetribution</dt>
+  <dd>
+    Applied while the player holds an Ankh of Retribution. If killed at night,
+    their corpse will attempt to kill whoever killed them the following night.
+  </dd>
   <dt>Tough</dt>
   <dd>Prevents any type of death from occurring. Expires when used.</dd>
+  <dt>UnholyEavesdropper</dt>
+  <dd>
+    Applied by a Hell Helm holder. The holder is able to read all of the
+    player's night phase messages.
+  </dd>
   <dt>Vigilant</dt>
   <dd>Items the player is holding are unable to be stolen.</dd>
   <dt>Vindictive</dt>
-  <dd>Gives the player a +1 modifier to their vote if voting for someone that was voting for them at the end of the previous day.</dd>
+  <dd>
+    Gives the player a +1 modifier to their vote if voting for someone that was
+    voting for them at the end of the previous day.
+  </dd>
+  <dt>Vulnerability</dt>
+  <dd>
+    Applied by a Potion of Vulnerability. The player's night immunity is removed
+    for one night.
+  </dd>
   <dt>Wavering</dt>
-  <dd>Gives the player a -1 modifier to their vote if they are voting for the same player they were voting for at the end of the previous day.</dd>
+  <dd>
+    Gives the player a -1 modifier to their vote if they are voting for the same
+    player they were voting for at the end of the previous day.
+  </dd>
   <dt>Weakened</dt>
   <dd>Role-blocks the player.</dd>
+  <dt>Weakness</dt>
+  <dd>
+    Applied by a Potion of Weakness. The player's role ability is blocked for
+    that night.
+  </dd>
+  <dt>Whispering</dt>
+  <dd>
+    Applied when activating a Whispering Orb. The player's night messages are
+    redirected anonymously to all players holding a Whispering Orb.
+  </dd>
+  <dt>Whispers</dt>
+  <dd>
+    Applied when using a Hvísla Rune. Allows the player to send anonymous night
+    messages to a specific player.
+  </dd>
+  <dt>WolfSkin</dt>
+  <dd>
+    Applied by a Wolf Pelt. Makes the player appear as a Werewolf to alignment
+    checks and grants one-time protection from a night kill.
+  </dd>
 </dl>
 
 ## Unknowing Variants
@@ -78,5 +321,5 @@ The following auras can be applied by moderators at game start:
 Several starting auras have 'Unknowing' versions that are invisible to the player holding them, while remaining visible to aura-detecting roles such as the Aura Seer. The auras with Unknowing variants are: Benign, Merciful, Persistent, Righteous, Vindictive, and Wavering.
 
 :::info[Unofficial Wiki]
-Additional information on auras is available on the [Unofficial H2P Wiki](https://unofficialhowtoplay.co.uk/index.php/Auras). Note: the unofficial wiki may contain inaccurate or outdated content.
+Additional information on auras is available on the <a href="https://unofficialhowtoplay.co.uk/index.php/Auras" target="_blank" rel="noopener noreferrer">Unofficial H2P Wiki</a>. Note: the unofficial wiki may contain inaccurate or outdated content.
 :::
