@@ -44,6 +44,7 @@ const config = {
         hashed: true,
         docsRouteBasePath: "/",
         indexBlog: false,
+        ignoreCssSelectors: [".alert--warning", ".alert--info", ".alert--secondary", ".alert--success", ".alert--danger"],
       },
     ],
     [
@@ -133,6 +134,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      docs: {
+        sidebar: {
+          autoCollapseCategories: true,
+        },
+      },
       colorMode: {
         defaultMode: "dark",
         respectPrefersColorScheme: true,
