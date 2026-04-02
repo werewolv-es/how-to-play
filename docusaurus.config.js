@@ -150,6 +150,7 @@ const config = {
         logo: {
           alt: "werewolv.es",
           src: "favicon-32x32.png",
+          href: "/",
         },
         items: [
           {
