@@ -8,6 +8,7 @@ const darkCodeTheme = themes.dracula;
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "werewolv.es",
+  tagline: "Guides, setup rules, and strategies for playing Werewolf on werewolv.es.",
   favicon: "favicon.ico",
 
   // Set the production url of your site here
@@ -143,8 +144,10 @@ const config = {
         defaultMode: "dark",
         respectPrefersColorScheme: true,
       },
-      // Replace with your project's social card
-      // image: 'img/docusaurus-social-card.jpg',
+      image: "https://werewolv.es/content/favicon/favicon-194x194.png",
+      metadata: [
+        { name: "robots", content: process.env.SITE_BASEURL ? "noindex, nofollow" : "index, follow" },
+      ],
       navbar: {
         title: "werewolv.es",
         logo: {
