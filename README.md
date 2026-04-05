@@ -22,9 +22,9 @@ It dumb.
 
 ## History
 
-<timeline>
-  <event interval="2023-04-01">April Fools!</event>
-</timeline>
+<Timeline>
+  <Event interval="2023-04-01">April Fools!</Event>
+</Timeline>
 ```
 
 ## Running locally
