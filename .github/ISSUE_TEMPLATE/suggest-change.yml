@@ -1,0 +1,27 @@
+name: Suggest a change
+description: Suggest an improvement or correction to a guide page
+labels: ["suggestion"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: Which page is this about?
+      placeholder: e.g. Seer, Harlot, Items
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested change
+      description: What would you like to see changed or corrected?
+      placeholder: Describe the change you'd like to see
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Any extra information, links, or screenshots
+    validations:
+      required: false

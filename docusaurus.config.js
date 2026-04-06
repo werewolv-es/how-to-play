@@ -81,7 +81,7 @@ const config = {
       },
       colorMode: {
         defaultMode: "dark",
-        respectPrefersColorScheme: true,
+        respectPrefersColorScheme: false,
       },
       image: "https://werewolv.es/content/favicon/favicon-194x194.png",
       metadata: [
