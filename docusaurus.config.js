@@ -22,6 +22,7 @@ const config = {
   // organizationName: "werewolv-es", // Usually your GitHub org/user name.
   // projectName: "how-to-play", // Usually your repo name.
 
+  trailingSlash: false,
   onBrokenLinks: "throw",
   markdown: {
     hooks: {
@@ -46,68 +47,6 @@ const config = {
         docsRouteBasePath: "/",
         indexBlog: false,
         ignoreCssSelectors: [".alert--warning", ".alert--info", ".alert--secondary", ".alert--success", ".alert--danger"],
-      },
-    ],
-    [
-      "@docusaurus/plugin-pwa",
-      {
-        debug: false,
-        offlineModeActivationStrategies: [
-          "appInstalled",
-          "standalone",
-          "queryString",
-        ],
-        pwaHead: [
-          {
-            tagName: "link",
-            rel: "manifest",
-            href: "/manifest.json",
-          },
-          {
-            tagName: "link",
-            rel: "apple-touch-icon",
-            href: "/apple-touch-icon.png",
-            sizes: "180x180",
-          },
-          {
-            tagName: "link",
-            rel: "icon",
-            type: "image/png",
-            href: "/favicon-194x194.png",
-            sizes: "194x194",
-          },
-          {
-            tagName: "link",
-            rel: "icon",
-            type: "image/png",
-            href: "/android-chrome-192x192.png",
-            sizes: "192x192",
-          },
-          {
-            tagName: "link",
-            rel: "icon",
-            type: "image/png",
-            href: "/favicon-16x16.png",
-            sizes: "16x16",
-          },
-          {
-            tagName: "link",
-            rel: "mask-icon",
-            href: "/safari-pinned-tab.svg",
-            color: "#000000",
-          },
-          {
-            tagName: "link",
-            id: "favicon",
-            rel: "shortcut icon",
-            href: "/favicon.ico",
-          },
-          {
-            tagName: "meta",
-            name: "theme-color",
-            content: "#000000"
-          }
-        ],
       },
     ],
   ],
