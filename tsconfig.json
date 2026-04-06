@@ -2,7 +2,8 @@
   // This file is not used in compilation. It is here just for a nice editor experience.
   "extends": "@tsconfig/docusaurus/tsconfig.json",
   "compilerOptions": {
-    "baseUrl": ".",
-    "jsx": "react-jsx"
+    // Until Docusaurus tsconfig.json is upgraded from 5.x
+    "ignoreDeprecations": "6.0",
+    "jsx": "react-jsx",
   }
 }
